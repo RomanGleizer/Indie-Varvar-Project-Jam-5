@@ -9,7 +9,6 @@ public class StartMenu : MonoBehaviour
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject settings;
     [SerializeField] private GameObject loading;
-    [SerializeField] private GameObject saving;
     private bool inLoading = false;
     private bool inSettings = false;
 
@@ -17,7 +16,6 @@ public class StartMenu : MonoBehaviour
     void Start()
     {
         loading.SetActive(false);
-        saving.SetActive(false);
         settings.SetActive(false);
     }
 
