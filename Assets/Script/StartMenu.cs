@@ -6,31 +6,55 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
 
-    [SerializeField] GameObject start;
-    [SerializeField] GameObject settings;
-    [SerializeField] GameObject loading;
-    [SerializeField] GameObject saving;
-    private bool Loading = false;
+    [SerializeField] private GameObject start;
+    [SerializeField] private GameObject settings;
+    [SerializeField] private GameObject loading;
+    [SerializeField] private GameObject saving;
+    private bool inLoading = false;
+    private bool inSettings = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1;
         loading.SetActive(false);
         saving.SetActive(false);
         settings.SetActive(false);
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            if (inLoading && !inSettings)
+            {
+                loading.SetActive(false);
+                start.SetActive(true);
+            }
+
+            if (!inLoading && inSettings)
+            {
+                settings.SetActive(false);
+                start.SetActive(true);
+            }
+        }
+    }
     public void LoadGame()
     {
-        Loading = true;
+        inLoading = true;
         start.SetActive(false);
         loading.SetActive(true);
     }
-
-    public void Back(GameObject canvas)
+    public void OnSettings()
     {
-        canvas.SetActive(false);
+        inLoading = true;
+        start.SetActive(false);
+        settings.SetActive(true);
+    }
+
+    public void Back(Canvas canvas)
+    {
+        canvas.gameObject.SetActive(false);
         start.SetActive(true);
     }
 

@@ -8,8 +8,10 @@ public class menu : MonoBehaviour
     [SerializeField] GameObject pause;
     [SerializeField] GameObject loading;
     [SerializeField] GameObject saving;
+    [SerializeField] GameObject settings;
     private bool inLoading = false;
     private bool inSaving = false;
+    private bool inSettings = false;
 
 
     // Start is called before the first frame update
@@ -19,6 +21,7 @@ public class menu : MonoBehaviour
         pause.SetActive(false);
         loading.SetActive(false);
         saving.SetActive(false);
+        settings.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,21 +30,27 @@ public class menu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
 
-            if (!inLoading && !inSaving)
+            if (!inLoading && !inSaving && !inSettings)
             {
                 pause.SetActive(true);
                 Time.timeScale = 0;
             }
 
-            if (inLoading && !inSaving)
+            if (inLoading && !inSaving && !inSettings)
             {
                 loading.SetActive(false);
                 pause.SetActive(true);
             }
 
-            if (!inLoading && inSaving)
+            if (!inLoading && inSaving && !inSettings)
             {
                 saving.SetActive(false);
+                pause.SetActive(true);
+            }
+
+            if (inLoading && !inSaving && inSettings)
+            {
+                settings.SetActive(false);
                 pause.SetActive(true);
             }
         }
@@ -56,7 +65,6 @@ public class menu : MonoBehaviour
     public void BackToStart()
     {
         SceneManager.LoadScene("Start");
-        Time.timeScale = 1;
     }
 
     public void LoadGame()
@@ -72,9 +80,9 @@ public class menu : MonoBehaviour
         saving.SetActive(true);
     }   
 
-    public void Back(GameObject canvas)
+    public void Back(Canvas canvas)
     {
-        canvas.SetActive(false);
+        canvas.gameObject.SetActive(false);
         pause.SetActive(true);
     }
 
