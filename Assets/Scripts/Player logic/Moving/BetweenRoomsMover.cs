@@ -21,25 +21,17 @@ public class BetweenRoomsMover : MonoBehaviour
             _rooms.GetChild(int.Parse(moveFrom) - 1).gameObject.SetActive(false);
             _rooms.GetChild(int.Parse(moveTo) - 1).gameObject.SetActive(true);
 
-            switch (trigger.transform.position.y > 0)
-            {
-                case true:
-                    transform.position = new Vector3(0, -DeltaY, 0);
-                    break;
-                case false:
-                    transform.position = new Vector3(0, DeltaY, 0);
-                    break;
-            }
+            if (trigger.transform.position.y > 0)
+                transform.position = new Vector3(0, -DeltaY, 0);
 
-            switch (trigger.transform.position.x > 0)
-            {
-                case true:
-                    transform.position = new Vector3(DeltaX, 0, 0);
-                    break;
-                case false:
-                    transform.position = new Vector3(-DeltaX, 0, 0);
-                    break;
-            }
+            if (trigger.transform.position.y < 0)
+                transform.position = new Vector3(0, DeltaY, 0);
+
+            if (trigger.transform.position.x > 0)
+                transform.position = new Vector3(-DeltaX, 0, 0);
+
+            if (trigger.transform.position.x < 0)
+                transform.position = new Vector3(DeltaX, 0, 0);
         }
     }
 }
