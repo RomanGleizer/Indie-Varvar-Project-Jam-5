@@ -34,7 +34,7 @@ public class ItemTaker : MonoBehaviour
                 isArmBusy = false;
             }
         }
-        else print("Ничего нет");
+        //else print("Ничего нет");
     }
 
     private void OnTriggerStay2D(Collider2D collision)

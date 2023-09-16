@@ -1,12 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class npc : MonoBehaviour
 {
     [SerializeField] private int numberOfDialog;
+    [SerializeField] private bool talking;
+    [SerializeField] private bool waitingItem;
+    [SerializeField] private DialogueDisplayer dialogueDisplayer;
     private void LetsTalk(int numberOfDialog)
     {
+        dialogueDisplayer.DisplayDialogue(numberOfDialog);
         //Загрузить диалог под таким-то номером
     }
 
@@ -19,9 +21,17 @@ public class npc : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         //Высветить знак для взаимодействия
-        if (Input.GetKey(KeyCode.F))
+
+        if (collision.TryGetComponent(out PlayerMover _))
         {
-            LetsTalk(numberOfDialog);
+            print("Можно говорить");
+            if (Input.GetKey(KeyCode.R) && talking)
+            {
+                LetsTalk(0);
+            }
+            else if (Input.GetKey(KeyCode.R) && waitingItem)
+                GiveItem();
         }
+
     }
 }

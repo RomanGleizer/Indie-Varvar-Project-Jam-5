@@ -14,9 +14,7 @@ public class DialogueDisplayer : MonoBehaviour
 
     private void Start()
     {
-        dialogueBox.SetActive(false);
-        DisplayDialogue(NatashaDialogs[numberDialogue]);   
-        if (Input.GetKeyDown(KeyCode.P)) NextDialogue();        
+        dialogueBox.SetActive(false);        
     }
 
     private IEnumerator MoveThroughDialogue(DialogueObject dialogueObject)
@@ -33,15 +31,15 @@ public class DialogueDisplayer : MonoBehaviour
         dialogueBox.SetActive(false);        
     }
 
-    public void DisplayDialogue(DialogueObject dialogueObject)
+    public void DisplayDialogue(int numberDialogue)
     {
-        StartCoroutine(MoveThroughDialogue(dialogueObject));
+        StartCoroutine(MoveThroughDialogue(NatashaDialogs[numberDialogue]));
     }
 
     public void NextDialogue()
     {
         numberDialogue++;
-        DisplayDialogue(NatashaDialogs[numberDialogue]);
+        DisplayDialogue(numberDialogue);
     }
 }
 
