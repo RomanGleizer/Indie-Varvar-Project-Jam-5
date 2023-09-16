@@ -3,19 +3,30 @@ using UnityEngine;
 public class npc : MonoBehaviour
 {
     [SerializeField] private int numberOfDialog;
-    [SerializeField] private bool talking;
-    [SerializeField] private bool waitingItem;
+    [SerializeField] private bool isWantTalking = false;
+    [SerializeField] private bool isWaitingItem = true;
     [SerializeField] private DialogueDisplayer dialogueDisplayer;
+    [SerializeField] private int numberWantedItem;
+    [SerializeField] private int numberHaveItem;
+    [SerializeField] private ItemTaker itemTaker;
+
+    
     private void LetsTalk(int numberOfDialog)
     {
         dialogueDisplayer.DisplayDialogue(numberOfDialog);
-        //Загрузить диалог под таким-то номером
     }
 
-    private void GiveItem()
+    private async void GiveItem()
     {
-        //Если дал предмет
-        numberOfDialog++;
+        if (numberWantedItem == itemTaker.typeItemInArm)
+        {
+            //LetsTalk(numberOfDialog);
+            //isWantTalking = true;
+            isWaitingItem = false;
+            LetsTalk(0);            
+            GameObject givenObj = Instantiate(itemTaker.allItems[numberHaveItem - 1].gameObject, gameObject.transform.position, gameObject.transform.rotation);
+            numberHaveItem = 0;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -24,13 +35,12 @@ public class npc : MonoBehaviour
 
         if (collision.TryGetComponent(out PlayerMover _))
         {
-            print("Можно говорить");
-            if (Input.GetKey(KeyCode.R) && talking)
+            print("Можно говорить");            
+            if (Input.GetKey(KeyCode.R) && isWaitingItem)
             {
-                LetsTalk(0);
-            }
-            else if (Input.GetKey(KeyCode.R) && waitingItem)
                 GiveItem();
+                itemTaker.DestroyItemFromInventory();
+            }
         }
 
     }
