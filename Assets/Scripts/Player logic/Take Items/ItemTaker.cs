@@ -6,8 +6,8 @@ public class ItemTaker : MonoBehaviour
     [SerializeField] private Image inventorySprite;
     [SerializeField] private Sprite[] allTypeOfItems;
     [SerializeField] private bool isArmBusy = false;
-    [SerializeField] private int typeItemInArm = 0;
-    [SerializeField] private Item[] allItems;
+    [SerializeField] public int typeItemInArm = 0;
+    [SerializeField] public Item[] allItems;
 
     public void TakeItem(Item item)
     {
@@ -29,9 +29,7 @@ public class ItemTaker : MonoBehaviour
             {
                 print("Кик");
                 GameObject dropItem = Instantiate(allItems[typeItemInArm - 1].gameObject, gameObject.transform.position, gameObject.transform.rotation);
-                inventorySprite.sprite = allTypeOfItems[0];
-                typeItemInArm = 0;
-                isArmBusy = false;
+                DestroyItemFromInventory();
             }
         }
         //else print("Ничего нет");
@@ -60,5 +58,12 @@ public class ItemTaker : MonoBehaviour
         typeItemInArm = item.NumberOfType;
         Destroy(item.gameObject);
         isArmBusy = true;
+    }
+
+    public void DestroyItemFromInventory()
+    {
+        inventorySprite.sprite = allTypeOfItems[0];
+        typeItemInArm = 0;
+        isArmBusy = false;
     }
 }
