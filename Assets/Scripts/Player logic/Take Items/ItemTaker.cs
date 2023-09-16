@@ -13,31 +13,52 @@ public class ItemTaker : MonoBehaviour
     {
         if (!isArmBusy)
         {
-            inventorySprite.sprite = allTypeOfItems[item.NumberOfType];
-            typeItemInArm = item.NumberOfType;
-            Destroy(item.gameObject);
-            isArmBusy = true;
+            ChangeInventory(item);
         }
         else
         {
-            //Instantiate(allItems[typeItemInArm], transform.position, transform.rotation);
-            inventorySprite.sprite = allTypeOfItems[item.NumberOfType];
-            typeItemInArm = item.NumberOfType;
-            Destroy(item.gameObject);
-            isArmBusy = true;
+            print("Заняты руки");
         }
+    }
 
+    public void DropItem()
+    {
+        if (isArmBusy)
+        {
+            if (Input.GetKey(KeyCode.Q))
+            {
+                print("Кик");
+                GameObject dropItem = Instantiate(allItems[typeItemInArm - 1].gameObject, gameObject.transform.position, gameObject.transform.rotation);
+                inventorySprite.sprite = allTypeOfItems[0];
+                typeItemInArm = 0;
+                isArmBusy = false;
+            }
+        }
+        else print("Ничего нет");
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Item item))
         {
+            print("Можно подобрать");
             if (Input.GetKey(KeyCode.E))
             {
+                print("Подбор");
                 TakeItem(item);
-                print("Можно подобрать");
             }
         }
+        if (collision.TryGetComponent(out Floor _))
+        {
+            DropItem();
+        }
+    }
+
+    public void ChangeInventory(Item item)
+    {
+        inventorySprite.sprite = allTypeOfItems[item.NumberOfType];
+        typeItemInArm = item.NumberOfType;
+        Destroy(item.gameObject);
+        isArmBusy = true;
     }
 }

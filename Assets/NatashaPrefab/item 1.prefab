@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4309577300672042642}
   - component: {fileID: 230682432830698869}
-  - component: {fileID: 5435103438520961452}
   - component: {fileID: 7261703946126327197}
-  - component: {fileID: 479678113532502155}
+  - component: {fileID: 5435103438520961452}
   m_Layer: 0
   m_Name: item 1
   m_TagString: Untagged
@@ -33,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &230682432830698869
 SpriteRenderer:
@@ -87,6 +86,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7261703946126327197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7307007777703260710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7346d74f79c5b4fbba62a07cafda5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfType: 1
 --- !u!61 &5435103438520961452
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132,28 +144,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5409267, y: 1.6704445}
   m_EdgeRadius: 0
---- !u!114 &7261703946126327197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307007777703260710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7346d74f79c5b4fbba62a07cafda5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NumberOfType: 0
---- !u!114 &479678113532502155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307007777703260710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd002d63169e4e54484bad86166fb8fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
