@@ -33,7 +33,7 @@ public class ItemTaker : MonoBehaviour
     {
         if (collision.TryGetComponent(out Item item))
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
                 TakeItem(item);
                 print("Можно подобрать");
