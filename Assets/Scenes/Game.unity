@@ -337,7 +337,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6566659106615480106, guid: 3b7822740a4161844895116dc429c241, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566659106615480106, guid: 3b7822740a4161844895116dc429c241, type: 3}
+      propertyPath: NumberOfType
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4236420680216920226, guid: 3b7822740a4161844895116dc429c241, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -443,7 +452,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 0.8862799
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -490,7 +499,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: -0.35377777, y: -0.039259255}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -501,7 +510,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7346666, y: 1.2063702}
   m_EdgeRadius: 0
 --- !u!114 &365001399
 MonoBehaviour:
@@ -542,7 +551,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySprite: {fileID: 901658214}
-  itemSq: {fileID: 21300000, guid: c08d8e323cb605b41add2340fd8a71ba, type: 3}
+  allItems:
+  - {fileID: 21300000, guid: 8d79d528355d6464e9d450ebd2363b21, type: 3}
+  - {fileID: 21300000, guid: c08d8e323cb605b41add2340fd8a71ba, type: 3}
+  - {fileID: 21300000, guid: c5b5db97a4470bf4a987b2fa7a6e3c90, type: 3}
   isArmBusy: 0
 --- !u!1 &405583096
 GameObject:
@@ -671,7 +683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.46002197, y: -0.69000244}
+  m_AnchoredPosition: {x: 0.45996094, y: -0.69000244}
   m_SizeDelta: {x: 1818.96, y: 979.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442377972
@@ -1347,7 +1359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.46002197, y: -0.69000244}
+  m_AnchoredPosition: {x: 0.45996094, y: -0.69000244}
   m_SizeDelta: {x: 1818.96, y: 979.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848418572
@@ -1834,7 +1846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.46002197, y: -0.69000244}
+  m_AnchoredPosition: {x: 0.45996094, y: -0.69000244}
   m_SizeDelta: {x: 1818.96, y: 979.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250593028
@@ -2119,11 +2131,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7261703946126327197, guid: 19609e04a32b63f45b2b6ad2c9f9183d, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261703946126327197, guid: 19609e04a32b63f45b2b6ad2c9f9183d, type: 3}
+      propertyPath: NumberOfType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7307007777703260710, guid: 19609e04a32b63f45b2b6ad2c9f9183d, type: 3}
       propertyPath: m_Name
       value: item 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 479678113532502155, guid: 19609e04a32b63f45b2b6ad2c9f9183d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2470,7 +2491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.46002197, y: -0.69000244}
+  m_AnchoredPosition: {x: 0.45996094, y: -0.69000244}
   m_SizeDelta: {x: 1818.96, y: 979.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541617657

@@ -4,15 +4,27 @@ using UnityEngine.UI;
 public class ItemTaker : MonoBehaviour
 {
     [SerializeField] private Image inventorySprite;
-    [SerializeField] private Sprite itemSq;
+    [SerializeField] private Sprite[] allTypeOfItems;
     [SerializeField] private bool isArmBusy = false;
+    [SerializeField] private int typeItemInArm = 0;
+    [SerializeField] private Item[] allItems;
+
     public void TakeItem(Item item)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (!isArmBusy)
         {
-            print("Подбор");
-            if (item.TryGetComponent(out ItemSq _))
-                inventorySprite.sprite = itemSq;
+            inventorySprite.sprite = allTypeOfItems[item.NumberOfType];
+            typeItemInArm = item.NumberOfType;
+            Destroy(item.gameObject);
+            isArmBusy = true;
+        }
+        else
+        {
+            //Instantiate(allItems[typeItemInArm], transform.position, transform.rotation);
+            inventorySprite.sprite = allTypeOfItems[item.NumberOfType];
+            typeItemInArm = item.NumberOfType;
+            Destroy(item.gameObject);
+            isArmBusy = true;
         }
 
     }
@@ -21,19 +33,11 @@ public class ItemTaker : MonoBehaviour
     {
         if (collision.TryGetComponent(out Item item))
         {
-            //TakeItem(item);
-            print("Можно подобрать");
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                print("Подбор");
-                if (collision.TryGetComponent(out ItemSq _))
-                { 
-                    inventorySprite.sprite = itemSq;
-                    Destroy(collision.gameObject);
-                    isArmBusy = true;
-                }
+                TakeItem(item);
+                print("Можно подобрать");
             }
-
         }
     }
 }
