@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
 {
-    [SerializeField] public float _speed;
+    public float speed;
 
     private Rigidbody2D _rb;
     private Vector2 _movement;
@@ -20,6 +20,6 @@ public class PlayerMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rb.MovePosition(_rb.position + _movement * _speed * Time.deltaTime);
+        _rb.MovePosition(_rb.position + _movement * speed * Time.deltaTime);
     }
 }

@@ -7,9 +7,10 @@ public class DialogueDisplayer : MonoBehaviour
     [SerializeField] public GameObject dialogueBox;
     [SerializeField] private TMP_Text dialogueName;
     [SerializeField] private TMP_Text dialogueText;
-    public int numberDialogue;
-    [SerializeField] DialogueObject[] NatashaDialogs;
+    [SerializeField] private DialogueObject[] NatashaDialogs;
     [SerializeField] private PlayerMover pm;
+
+    private int numberDialogue;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class DialogueDisplayer : MonoBehaviour
 
     private IEnumerator MoveThroughDialogue(DialogueObject dialogueObject)
     {
-        pm._speed = 0;
+        pm.speed = 0;
         dialogueBox.SetActive(true);
         dialogueName.text = dialogueObject.nameWhoTalking;
         for (int i = 0; i < dialogueObject.dialogueLines.Length; i++)
@@ -29,7 +30,7 @@ public class DialogueDisplayer : MonoBehaviour
             yield return null;
         }
         dialogueBox.SetActive(false);
-        pm._speed = 2;
+        pm.speed = 2;
     }
 
     public void DisplayDialogue(int numberDialogue)

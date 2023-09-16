@@ -6,50 +6,49 @@ public class ItemTaker : MonoBehaviour
     [SerializeField] private Image inventorySprite;
     [SerializeField] private Sprite[] allTypeOfItems;
     [SerializeField] private bool isArmBusy = false;
-    [SerializeField] public int typeItemInArm = 0;
-    [SerializeField] public Item[] allItems;
+    [SerializeField] private Transform rooms;
+    
+    public int typeItemInArm = 0;
+    public Item[] allItems;
+
+    private Transform currentRoom;
+
+    public Transform CurrentRoom => currentRoom;
+
+    private void Awake()
+    {
+        currentRoom = GetComponent<Transform>();
+    }
 
     public void TakeItem(Item item)
     {
-        if (!isArmBusy)
-        {
-            ChangeInventory(item);
-        }
-        else
-        {
-            print("Заняты руки");
-        }
+        if (!isArmBusy) ChangeInventory(item);
     }
 
     public void DropItem()
     {
-        if (isArmBusy)
+        if (!isArmBusy) return;
+        
+        if (Input.GetKey(KeyCode.Q))
         {
-            if (Input.GetKey(KeyCode.Q))
-            {
-                print("Кик");
-                GameObject dropItem = Instantiate(allItems[typeItemInArm - 1].gameObject, gameObject.transform.position, gameObject.transform.rotation);
-                DestroyItemFromInventory();
-            }
+            foreach (Transform room in rooms)
+                if (room.gameObject.activeSelf) currentRoom = room;
+
+            Instantiate(allItems[typeItemInArm - 1].GetComponent<Image>(),
+                    gameObject.transform.position, 
+                    gameObject.transform.rotation,
+                    currentRoom);
+
+            DestroyItemFromInventory();
         }
-        //else print("Ничего нет");
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Item item))
-        {
-            print("Можно подобрать");
-            if (Input.GetKey(KeyCode.E))
-            {
-                print("Подбор");
-                TakeItem(item);
-            }
-        }
-        if (collision.TryGetComponent(out Floor _))
-        {
-            DropItem();
-        }
+            if (Input.GetKey(KeyCode.E)) TakeItem(item);
+
+        if (collision.TryGetComponent(out Floor _)) DropItem();
     }
 
     public void ChangeInventory(Item item)

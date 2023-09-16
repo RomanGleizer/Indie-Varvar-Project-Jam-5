@@ -13,9 +13,7 @@ public class menu : MonoBehaviour
     private bool inSaving = false;
     private bool inSettings = false;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Time.timeScale = 1;
         pause.SetActive(false);
@@ -24,8 +22,7 @@ public class menu : MonoBehaviour
         settings.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -85,7 +82,4 @@ public class menu : MonoBehaviour
         canvas.gameObject.SetActive(false);
         pause.SetActive(true);
     }
-
-
-
 }

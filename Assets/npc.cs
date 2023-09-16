@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class npc : MonoBehaviour
@@ -9,23 +10,37 @@ public class npc : MonoBehaviour
     [SerializeField] private int numberWantedItem;
     [SerializeField] private int numberHaveItem;
     [SerializeField] private ItemTaker itemTaker;
+    [SerializeField] private Transform rooms;
 
-    
+    private Transform currentRoom;
+
+    public Transform CurrentRoom => currentRoom;
+
+    private void Awake()
+    {
+        currentRoom = GetComponent<Transform>();
+    }
+
     private void LetsTalk(int numberOfDialog)
     {
         dialogueDisplayer.DisplayDialogue(numberOfDialog);
     }
 
-    private async void GiveItem()
+    private void GiveItem()
     {
         if (numberWantedItem == itemTaker.typeItemInArm)
         {
-            //LetsTalk(numberOfDialog);
-            //isWantTalking = true;
             isWaitingItem = false;
-            LetsTalk(0);            
-            GameObject givenObj = Instantiate(itemTaker.allItems[numberHaveItem - 1].gameObject, gameObject.transform.position, gameObject.transform.rotation);
+            LetsTalk(0);
+
+            GameObject go = Instantiate(
+                itemTaker.allItems[numberHaveItem - 1].gameObject, 
+                new Vector3(gameObject.transform.position.x + 1f, gameObject.transform.position.y, gameObject.transform.position.z), 
+                gameObject.transform.rotation, 
+                currentRoom);
+
             numberHaveItem = 0;
+            itemTaker.DestroyItemFromInventory();
         }
     }
 
@@ -33,15 +48,13 @@ public class npc : MonoBehaviour
     {
         //Высветить знак для взаимодействия
 
-        if (collision.TryGetComponent(out PlayerMover _))
-        {
-            print("Можно говорить");            
+        if (collision.TryGetComponent(out PlayerMover _))      
             if (Input.GetKey(KeyCode.R) && isWaitingItem)
             {
-                GiveItem();
-                itemTaker.DestroyItemFromInventory();
-            }
-        }
+                foreach (Transform room in rooms)
+                    if (room.gameObject.activeSelf) currentRoom = room;
 
+                GiveItem();
+            }
     }
 }

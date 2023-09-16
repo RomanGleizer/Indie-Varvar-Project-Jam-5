@@ -28,7 +28,7 @@ public class BetweenRoomsMover : MonoBehaviour
             
             if (trigger.transform.position.x > 0)
                 transform.position = new Vector3(-DeltaX, 0, 0);
-            else if(trigger.transform.position.x < 0)
+            else if (trigger.transform.position.x < 0)
                 transform.position = new Vector3(DeltaX, 0, 0);
         }
     }
