@@ -7,8 +7,8 @@ public class npc : MonoBehaviour
     [SerializeField] private bool isWantTalking = false;
     [SerializeField] private bool isWaitingItem = true;
     [SerializeField] private DialogueDisplayer dialogueDisplayer;
-    [SerializeField] private int numberWantedItem;
-    [SerializeField] private int numberHaveItem;
+    [SerializeField] public int numberWantedItem;
+    [SerializeField] public int numberHaveItem;
     [SerializeField] private ItemTaker itemTaker;
     [SerializeField] private Transform rooms;
 
@@ -40,6 +40,7 @@ public class npc : MonoBehaviour
                 currentRoom);
 
             numberHaveItem = 0;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             itemTaker.DestroyItemFromInventory();
         }
     }
