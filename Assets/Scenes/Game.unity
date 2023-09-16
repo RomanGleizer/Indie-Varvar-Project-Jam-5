@@ -755,7 +755,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 633374385, guid: 0b1aa0992a1a7424bbe8951a4338752c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3490,6 +3490,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3721072486070873700, guid: 8d6f520d6c035a94bb6042399f573c2a, type: 3}
+      propertyPath: itemTaker
+      value: 
+      objectReference: {fileID: 365001401}
+    - target: {fileID: 3721072486070873700, guid: 8d6f520d6c035a94bb6042399f573c2a, type: 3}
       propertyPath: dialogueDisplayer
       value: 
       objectReference: {fileID: 784483464}
@@ -3560,7 +3564,7 @@ PrefabInstance:
       objectReference: {fileID: 1196975815}
     - target: {fileID: 4527345417811396721, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4680508584799418668, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
       propertyPath: m_Pivot.x
@@ -3646,14 +3650,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4859416973418256753, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
-      propertyPath: m_fontAsset
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: pm
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 4859416973418256753, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 365001400}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
