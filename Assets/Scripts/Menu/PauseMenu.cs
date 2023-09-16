@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +7,7 @@ public class menu : MonoBehaviour
     [SerializeField] GameObject loading;
     [SerializeField] GameObject saving;
     [SerializeField] GameObject settings;
+
     private bool inLoading = false;
     private bool inSaving = false;
     private bool inSettings = false;

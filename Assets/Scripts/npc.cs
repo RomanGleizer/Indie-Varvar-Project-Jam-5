@@ -1,5 +1,5 @@
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class npc : MonoBehaviour
 {
@@ -7,10 +7,12 @@ public class npc : MonoBehaviour
     [SerializeField] private bool isWantTalking = false;
     [SerializeField] private bool isWaitingItem = true;
     [SerializeField] private DialogueDisplayer dialogueDisplayer;
-    [SerializeField] public int numberWantedItem;
-    [SerializeField] public int numberHaveItem;
     [SerializeField] private ItemTaker itemTaker;
     [SerializeField] private Transform rooms;
+    [SerializeField] private GameObject essentialItem;
+
+    public int numberWantedItem;
+    public int numberHaveItem;
 
     private Transform currentRoom;
 
@@ -19,6 +21,14 @@ public class npc : MonoBehaviour
     private void Awake()
     {
         currentRoom = GetComponent<Transform>();
+        // Пока что цвет. Но потом будем менять изображение
+        gameObject.transform.GetChild(0).GetComponent<Image>().color = essentialItem.GetComponent<Image>().color;
+    }
+
+    private void Update()
+    {
+        if (numberHaveItem == 0 && itemTaker.GetComponent<BetweenRoomsMover>().IsPlayerTouchedTrigger)
+            gameObject.SetActive(false);
     }
 
     private void LetsTalk(int numberOfDialog)
@@ -54,7 +64,6 @@ public class npc : MonoBehaviour
             {
                 foreach (Transform room in rooms)
                     if (room.gameObject.activeSelf) currentRoom = room;
-
                 GiveItem();
             }
     }
