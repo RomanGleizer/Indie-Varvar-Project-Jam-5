@@ -19,7 +19,7 @@ public class Spawn : MonoBehaviour
         thisItem.NumberOfType = numberOfTypeItem;
     }
 
-    public void SpawnNpc(int numberOfTypeNpc, Vector3 location, Transform room, int neededItem, int havingItem, int numberNextDialogue, int index)
+    public void SpawnNpc(int numberOfTypeNpc, Vector3 location, Transform room, int neededItem, int havingItem, int numberNextDialogue)//, int index)
     {
          npc thisNpc = Instantiate(
                 allNpc[numberOfTypeNpc - 1],
