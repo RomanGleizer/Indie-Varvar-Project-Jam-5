@@ -255,12 +255,24 @@ MonoBehaviour:
   dialogueBox: {fileID: 5854359897921727640}
   dialogueName: {fileID: 3341176558555594272}
   dialogueText: {fileID: 4859416973418256753}
-  NatashaDialogs:
-  - {fileID: 11400000, guid: 1c39e6cea9cc17743b2b8ad580e1f851, type: 2}
-  - {fileID: 11400000, guid: 6da8ee6c4afae0d4eb59ee37e831223b, type: 2}
-  - {fileID: 11400000, guid: 7c563a7fc46932040bbd30ac228f5437, type: 2}
+  NpcDialogs:
+  - {fileID: 11400000, guid: 3ca83317ebf842841894ead1b2f02498, type: 2}
+  - {fileID: 11400000, guid: 90129cdbccb94f14185279f3901569d7, type: 2}
+  - {fileID: 11400000, guid: 95102d6d03fbdce489cdc51f63f07e55, type: 2}
+  - {fileID: 11400000, guid: ffb246dc6727b33489f4097cd709fb6d, type: 2}
+  - {fileID: 11400000, guid: 6eb1ed6c1ffcd4645a42fd259dceab2f, type: 2}
+  - {fileID: 11400000, guid: f08b69a0aa376524f87442fa8a8ee7c1, type: 2}
+  - {fileID: 11400000, guid: 31a072cdfa038e547b09dfa15012c2b7, type: 2}
+  - {fileID: 11400000, guid: ba5cff7f38cb9e64c9faf90590db930e, type: 2}
+  - {fileID: 11400000, guid: 17603245881d3cf4bb9265febe83d350, type: 2}
+  - {fileID: 11400000, guid: 8e278bb9d6ebc8e4493efe7d2d3d9359, type: 2}
+  - {fileID: 11400000, guid: 49ffca8d4c347654597674f5a4dafd75, type: 2}
+  - {fileID: 11400000, guid: 8c5f8686b91f521469d88ddc7f164ff4, type: 2}
+  - {fileID: 11400000, guid: 3bfcbc97a27d8794d88f81bb7bc37868, type: 2}
+  - {fileID: 11400000, guid: 57cdf17cd1120fd42ab8e9a2513a03c0, type: 2}
+  - {fileID: 11400000, guid: a46258331dd475348a3da9815994bf35, type: 2}
   pm: {fileID: 0}
-  dialogueObj: {fileID: 0}
+  dialogueObj: {fileID: 11400000, guid: 3ca83317ebf842841894ead1b2f02498, type: 2}
   numberDialogue: 0
 --- !u!1 &959753478395599626
 GameObject:

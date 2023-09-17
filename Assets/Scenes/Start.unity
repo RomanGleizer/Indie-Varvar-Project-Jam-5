@@ -556,14 +556,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 519420033}
-    - target: {fileID: 1485025959865390888, guid: 0d1e06d9ca8a7764f8a48e1277e17b89, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Back
-      objectReference: {fileID: 0}
-    - target: {fileID: 1485025959865390888, guid: 0d1e06d9ca8a7764f8a48e1277e17b89, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StartMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 4680806232588442872, guid: 0d1e06d9ca8a7764f8a48e1277e17b89, type: 3}
       propertyPath: m_Name
       value: Mistake
