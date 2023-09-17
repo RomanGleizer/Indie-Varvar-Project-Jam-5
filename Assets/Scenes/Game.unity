@@ -3510,8 +3510,68 @@ PrefabInstance:
       objectReference: {fileID: 365001400}
     - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
       propertyPath: NpcDialogs.Array.size
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ca83317ebf842841894ead1b2f02498, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 90129cdbccb94f14185279f3901569d7, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 95102d6d03fbdce489cdc51f63f07e55, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: ffb246dc6727b33489f4097cd709fb6d, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6eb1ed6c1ffcd4645a42fd259dceab2f, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: f08b69a0aa376524f87442fa8a8ee7c1, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 31a072cdfa038e547b09dfa15012c2b7, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: ba5cff7f38cb9e64c9faf90590db930e, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 17603245881d3cf4bb9265febe83d350, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e278bb9d6ebc8e4493efe7d2d3d9359, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 49ffca8d4c347654597674f5a4dafd75, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c5f8686b91f521469d88ddc7f164ff4, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3bfcbc97a27d8794d88f81bb7bc37868, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 57cdf17cd1120fd42ab8e9a2513a03c0, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: NpcDialogs.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: a46258331dd475348a3da9815994bf35, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
