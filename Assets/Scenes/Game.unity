@@ -2313,6 +2313,8 @@ MonoBehaviour:
   itemTaker: {fileID: 365001401}
   allNpc:
   - {fileID: 4241382891382381998, guid: 80c23e15114ae9b408370ce599414244, type: 3}
+  - {fileID: 4241382891382381998, guid: 3cd28d50f629f2a488c122eebabf225c, type: 3}
+  - {fileID: 4241382891382381998, guid: 2e53f760a74a1de42a7909a52a97970d, type: 3}
   rooms: {fileID: 1699768976}
   dialogueDisplayer: {fileID: 784483464}
   tasks: {fileID: 0}
