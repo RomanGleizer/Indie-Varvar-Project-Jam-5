@@ -35,7 +35,7 @@ public class AllScripts : MonoBehaviour
 
         spawn.SpawnNpc(
             1,
-            new Vector3(3, 2, 0),
+            new Vector3(3, 1, 0),
             roomOne,
             1,
             2,

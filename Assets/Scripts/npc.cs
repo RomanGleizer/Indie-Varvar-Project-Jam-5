@@ -8,7 +8,7 @@ public class npc : MonoBehaviour
     [SerializeField] public DialogueDisplayer dialogueDisplayer;
     [SerializeField] public ItemTaker itemTaker;
     [SerializeField] public Transform rooms;
-    [SerializeField] private GameObject essentialItem;
+    [SerializeField] private Sprite essentialItem;
 
     public int numberWantedItem;
     public int numberHaveItem;
@@ -20,7 +20,7 @@ public class npc : MonoBehaviour
     private void Awake()
     {
         currentRoom = GetComponent<Transform>();
-        gameObject.transform.GetChild(0).GetComponent<Image>().color = essentialItem.GetComponent<Image>().color;
+        gameObject.transform.GetChild(1).GetComponent<Image>().sprite = essentialItem;
     }
 
     private void Update()
