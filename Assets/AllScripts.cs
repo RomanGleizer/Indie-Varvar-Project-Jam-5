@@ -1,13 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.Tilemaps;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AllScripts : MonoBehaviour
 {
+    [SerializeField] private PlayerMover mover;
     [SerializeField] public Transform roomOne;
     [SerializeField] public Transform roomTwo;
     [SerializeField] public Transform roomThree;
@@ -30,7 +25,6 @@ public class AllScripts : MonoBehaviour
     {
         spawn = GetComponent<Spawn>();
         ZeroCycle();
-        FirstCycle();
     }
 
     void ZeroCycle()
@@ -39,8 +33,14 @@ public class AllScripts : MonoBehaviour
         //как-то сделать проверку, то гг прошел все комнаты
     }
 
-    void FirstCycle()
-    {        
+    public void FirstCycle()
+    {
+        // transform.position = Vector3.zero;
+        _rooms.GetChild(0).gameObject.SetActive(true);
+        _rooms.GetChild(1).gameObject.SetActive(false);
+        _rooms.GetChild(2).gameObject.SetActive(false);
+        _rooms.GetChild(3).gameObject.SetActive(false);
+        _rooms.GetChild(4).gameObject.SetActive(false);
         // Ориентир на спрайта
         sprite.transform.position = Vector3.zero;
         //_rooms.GetChild(int.Parse(moveFrom) - 1).gameObject.SetActive(false);
@@ -64,6 +64,7 @@ public class AllScripts : MonoBehaviour
 
         spawn.SpawnItem(3, new Vector3(1, 1, 0), roomThree);
     }
+
     void FirstTwo()
     {
         spawn.SpawnNpc(
@@ -79,6 +80,12 @@ public class AllScripts : MonoBehaviour
 
     void SecondCycle()
     {
+        _rooms.GetChild(0).gameObject.SetActive(true);
+        _rooms.GetChild(1).gameObject.SetActive(false);
+        _rooms.GetChild(2).gameObject.SetActive(false);
+        _rooms.GetChild(3).gameObject.SetActive(false);
+        _rooms.GetChild(4).gameObject.SetActive(false);
+        sprite.transform.position = Vector3.zero;
         dialogueDisplayer.DisplayDialogueVoice(secondSceneVoice);
         
         spawn.SpawnNpc(
@@ -99,18 +106,42 @@ public class AllScripts : MonoBehaviour
     }
     void ThirdCycle()
     {
+        _rooms.GetChild(0).gameObject.SetActive(true);
+        _rooms.GetChild(1).gameObject.SetActive(false);
+        _rooms.GetChild(2).gameObject.SetActive(false);
+        _rooms.GetChild(3).gameObject.SetActive(false);
+        _rooms.GetChild(4).gameObject.SetActive(false);
+        sprite.transform.position = Vector3.zero;
         dialogueDisplayer.DisplayDialogueVoice(thirdSceneVoice);
     }
     void FourthCycle()
     {
+        _rooms.GetChild(0).gameObject.SetActive(true);
+        _rooms.GetChild(1).gameObject.SetActive(false);
+        _rooms.GetChild(2).gameObject.SetActive(false);
+        _rooms.GetChild(3).gameObject.SetActive(false);
+        _rooms.GetChild(4).gameObject.SetActive(false);
+        sprite.transform.position = Vector3.zero;
         dialogueDisplayer.DisplayDialogueVoice(fourSceneVoice);
     }
     void FifthCycle()
     {
+        _rooms.GetChild(0).gameObject.SetActive(true);
+        _rooms.GetChild(1).gameObject.SetActive(false);
+        _rooms.GetChild(2).gameObject.SetActive(false);
+        _rooms.GetChild(3).gameObject.SetActive(false);
+        _rooms.GetChild(4).gameObject.SetActive(false);
+        sprite.transform.position = Vector3.zero;
         dialogueDisplayer.DisplayDialogueVoice(fiveSceneVoice);
     }
     void EndCycle()
     {
+        _rooms.GetChild(0).gameObject.SetActive(true);
+        _rooms.GetChild(1).gameObject.SetActive(false);
+        _rooms.GetChild(2).gameObject.SetActive(false);
+        _rooms.GetChild(3).gameObject.SetActive(false);
+        _rooms.GetChild(4).gameObject.SetActive(false);
+        sprite.transform.position = Vector3.zero;
         dialogueDisplayer.DisplayDialogueVoice(endSceneVoice);
     }
 }
