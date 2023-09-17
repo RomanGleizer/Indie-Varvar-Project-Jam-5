@@ -568,8 +568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 1935380987}
   settings: {fileID: 1494940549}
-  loading: {fileID: 1809314114}
-  creators: {fileID: 27997934}
+  creators: {fileID: 755509312}
+  mistake: {fileID: 1809314114}
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -936,6 +936,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668082995}
   m_CullTransparentMesh: 1
+--- !u!1 &755509312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3270191763382768542, guid: e9ef3e256dad1c04d84f4a678ad5167f, type: 3}
+  m_PrefabInstance: {fileID: 6116352010606745890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &837755580
 GameObject:
   m_ObjectHideFlags: 0
