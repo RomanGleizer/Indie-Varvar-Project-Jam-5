@@ -31,6 +31,7 @@ public class DialogueDisplayer : MonoBehaviour
     {
         if (phrase.text == NpcDialogs[0].dialogueLines[0].dialogue)
             if (pm.isCurrentNpcChild) rooms.GetChild(3).GetChild(1).GetComponent<AudioSource>().Play();
+
         if (phrase.text == NpcDialogs[0].dialogueLines[0].dialogue && pm.isCurrentNpcChild)
         {
             rooms.GetChild(3).GetChild(1).GetComponent<AudioSource>().Play();
