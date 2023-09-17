@@ -8,8 +8,9 @@ public class StartMenu : MonoBehaviour
 
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject settings;
-    [SerializeField] private GameObject loading;
     [SerializeField] private GameObject creators;
+    [SerializeField] private GameObject mistake;
+
     private bool inLoading = false;
     private bool inSettings = false;
     private bool inCreators = false;
@@ -17,9 +18,9 @@ public class StartMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        loading.SetActive(false);
         settings.SetActive(false);
         creators.SetActive(false);
+        mistake.SetActive(false); //Поменять!!!!
     }
 
     void Update()
@@ -29,7 +30,7 @@ public class StartMenu : MonoBehaviour
 
             if (inLoading && !inSettings)
             {
-                loading.SetActive(false);
+                mistake.SetActive(false); //Поменять!!!!
                 start.SetActive(true);
             }
 
@@ -44,7 +45,7 @@ public class StartMenu : MonoBehaviour
     {
         inLoading = true;
         start.SetActive(false);
-        loading.SetActive(true);
+        mistake.SetActive(true); //Поменять!!!!
     }
     public void Creators()
     {
@@ -54,7 +55,7 @@ public class StartMenu : MonoBehaviour
     }
     public void OnSettings()
     {
-        inLoading = true;
+        inSettings = true;
         start.SetActive(false);
         settings.SetActive(true);
     }

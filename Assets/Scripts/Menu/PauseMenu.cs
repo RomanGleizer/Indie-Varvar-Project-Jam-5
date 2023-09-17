@@ -1,53 +1,52 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
-    [SerializeField] GameObject pause;
-    [SerializeField] GameObject loading;
-    [SerializeField] GameObject saving;
-    [SerializeField] GameObject settings;
+    [SerializeField] private GameObject pause;
+    [SerializeField] private GameObject settings;
+    [SerializeField] private GameObject mistake;
 
-    private bool inLoading = false;
-    private bool inSaving = false;
-    private bool inSettings = false;
+    [SerializeField] private bool inSettings = false;
+    [SerializeField] private bool inPause = false;
+    [SerializeField] private bool inSaving = false;
+    private bool inCreators = false;
 
     private void Start()
     {
         Time.timeScale = 1;
         pause.SetActive(false);
-        loading.SetActive(false);
-        saving.SetActive(false);
         settings.SetActive(false);
+        mistake.SetActive(false); //Поменять!!!!
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-
-            if (!inLoading && !inSaving && !inSettings)
-            {
-                pause.SetActive(true);
-                Time.timeScale = 0;
-            }
-
-            if (inLoading && !inSaving && !inSettings)
-            {
-                loading.SetActive(false);
-                pause.SetActive(true);
-            }
-
-            if (!inLoading && inSaving && !inSettings)
-            {
-                saving.SetActive(false);
-                pause.SetActive(true);
-            }
-
-            if (inLoading && !inSaving && inSettings)
+            if (inSettings && !inPause && !inSaving)
             {
                 settings.SetActive(false);
                 pause.SetActive(true);
+                inSettings = false;
+            }
+            else if (!inSettings && !inPause && !inSaving)
+            {
+                pause.SetActive(true);
+                inPause = true;
+                Time.timeScale = 0;
+            }
+            else if (!inSettings && inPause && !inSaving)
+            {
+                PauseOff();
+                inPause = false;
+            }
+            else if (!inSettings && !inPause && inSaving)
+            {
+                mistake.SetActive(false); //Поменять!!!!
+                pause.SetActive(true);
+                inSaving = false;
             }
         }
     }
@@ -55,26 +54,26 @@ public class menu : MonoBehaviour
     public void PauseOff()
     {
         pause.SetActive(false);
+        inPause = false;
         Time.timeScale = 1;
+    }
+    public void OnSettings()
+    {
+        inSettings = true;
+        pause.SetActive(false);
+        settings.SetActive(true);
+    }
+    public void SavingGame()
+    {
+        inSaving = true;
+        pause.SetActive(false);
+        mistake.SetActive(true); //Поменять!!!!
     }
 
     public void BackToStart()
     {
         SceneManager.LoadScene("Start");
     }
-
-    public void LoadGame()
-    {
-        inLoading = true;
-        pause.SetActive(false);
-        loading.SetActive(true);
-    }
-    public void SaveGame()
-    {
-        inSaving = true;
-        pause.SetActive(false);
-        saving.SetActive(true);
-    }   
 
     public void Back(Canvas canvas)
     {
