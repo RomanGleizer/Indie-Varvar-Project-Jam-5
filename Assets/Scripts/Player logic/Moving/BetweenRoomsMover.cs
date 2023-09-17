@@ -21,7 +21,7 @@ public class BetweenRoomsMover : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(Check), 1f, 1f);
+        InvokeRepeating(nameof(Check), 2f, 2f);
     }
 
     private async void Check()
