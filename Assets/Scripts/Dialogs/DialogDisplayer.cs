@@ -17,6 +17,7 @@ public class DialogueDisplayer : MonoBehaviour
     private void Start()
     {
         dialogueBox.SetActive(false);
+        numberDialogue = 0;
     }
 
     private void FixedUpdate()

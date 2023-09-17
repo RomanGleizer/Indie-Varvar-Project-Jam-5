@@ -3509,6 +3509,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 365001400}
     - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: dialogueObj
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ca83317ebf842841894ead1b2f02498, type: 2}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
       propertyPath: NpcDialogs.Array.size
       value: 15
       objectReference: {fileID: 0}
