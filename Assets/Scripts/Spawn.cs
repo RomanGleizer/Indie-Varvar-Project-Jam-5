@@ -4,7 +4,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     [SerializeField] private ItemTaker itemTaker;
-    [SerializeField] private npc[] allNpc;
+    public npc[] allNpc;
     [SerializeField] private Transform rooms;
     [SerializeField] private DialogueDisplayer dialogueDisplayer;
     //[SerializeField] private Transform tasks;
