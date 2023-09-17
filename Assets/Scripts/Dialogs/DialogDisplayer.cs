@@ -9,12 +9,19 @@ public class DialogueDisplayer : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private DialogueObject[] NatashaDialogs;
     [SerializeField] private PlayerMover pm;
+    [SerializeField] private DialogueObject dialogueObj;
 
-    private int numberDialogue;
+
+    [SerializeField] public int numberDialogue;
 
     private void Start()
     {
         dialogueBox.SetActive(false);
+    }
+
+    private void FixedUpdate()
+    {
+        dialogueObj = NatashaDialogs[numberDialogue];
     }
 
     private IEnumerator MoveThroughDialogue(DialogueObject dialogueObject)
@@ -33,15 +40,10 @@ public class DialogueDisplayer : MonoBehaviour
         pm.speed = 2;
     }
 
-    public void DisplayDialogue(int numberDialogue)
+    public void DisplayDialogue()
     {
-        StartCoroutine(MoveThroughDialogue(NatashaDialogs[numberDialogue]));
+        StartCoroutine(MoveThroughDialogue(dialogueObj));
     }
-
-    public void NextDialogue()
-    {
-        numberDialogue++;
-        DisplayDialogue(numberDialogue);
-    }
+    
 }
 

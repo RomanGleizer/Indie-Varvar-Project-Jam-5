@@ -4,16 +4,21 @@ public class Spawn : MonoBehaviour
 {
     [SerializeField] private ItemTaker itemTaker;
     [SerializeField] private npc[] allNpc;
-    private void SpawnItem(int numberOfTypeItem, Vector3 location, Transform room)
+    [SerializeField] private Transform rooms;
+    [SerializeField] private DialogueDisplayer dialogueDisplayer;
+    //[SerializeField] private TaskCreator taskCreator;
+
+    public void SpawnItem(int numberOfTypeItem, Vector3 location, Transform room)
     {
-        GameObject _item = Instantiate(
-                itemTaker.allItems[numberOfTypeItem - 1].gameObject,
+        Item thisItem = Instantiate(
+                itemTaker.allItems[numberOfTypeItem - 1],
                 location,
                 gameObject.transform.rotation,
                 room);
+        thisItem.NumberOfType = numberOfTypeItem;
     }
 
-    private void SpawnNpc(int numberOfTypeNpc, Vector3 location, Transform room, int neededItem, int havingItem)
+    public void SpawnNpc(int numberOfTypeNpc, Vector3 location, Transform room, int neededItem, int havingItem, int numbDial)
     {
          npc thisNpc = Instantiate(
                 allNpc[numberOfTypeNpc - 1].GetComponent<npc>(),
@@ -22,6 +27,10 @@ public class Spawn : MonoBehaviour
                 room);
         thisNpc.numberWantedItem = neededItem;
         thisNpc.numberHaveItem = havingItem;
+        thisNpc.rooms = rooms;
+        thisNpc.itemTaker = itemTaker;
+        thisNpc.dialogueDisplayer = dialogueDisplayer;
+        thisNpc.numberOfDialog = numbDial;
     }
 
 }

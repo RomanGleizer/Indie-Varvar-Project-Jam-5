@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TaskCreator : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI taskText;
+    [SerializeField] public TextMeshProUGUI taskText;
     [SerializeField] private string taskDescription;
 
     private void Awake()

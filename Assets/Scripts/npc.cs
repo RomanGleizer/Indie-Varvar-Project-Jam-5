@@ -3,12 +3,11 @@ using UnityEngine.UI;
 
 public class npc : MonoBehaviour
 {
-    [SerializeField] private int numberOfDialog;
-    [SerializeField] private bool isWantTalking = false;
+    [SerializeField] public int numberOfDialog;
     [SerializeField] private bool isWaitingItem = true;
-    [SerializeField] private DialogueDisplayer dialogueDisplayer;
-    [SerializeField] private ItemTaker itemTaker;
-    [SerializeField] private Transform rooms;
+    [SerializeField] public DialogueDisplayer dialogueDisplayer;
+    [SerializeField] public ItemTaker itemTaker;
+    [SerializeField] public Transform rooms;
     [SerializeField] private GameObject essentialItem;
 
     public int numberWantedItem;
@@ -23,6 +22,7 @@ public class npc : MonoBehaviour
         currentRoom = GetComponent<Transform>();
         // Пока что цвет. Но потом будем менять изображение
         gameObject.transform.GetChild(0).GetComponent<Image>().color = essentialItem.GetComponent<Image>().color;
+
     }
 
     private void Update()
@@ -31,9 +31,9 @@ public class npc : MonoBehaviour
             gameObject.SetActive(false);
     }
 
-    private void LetsTalk(int numberOfDialog)
+    private void LetsTalk()
     {
-        dialogueDisplayer.DisplayDialogue(numberOfDialog);
+        dialogueDisplayer.DisplayDialogue();
     }
 
     private void GiveItem()
@@ -41,7 +41,7 @@ public class npc : MonoBehaviour
         if (numberWantedItem == itemTaker.typeItemInArm)
         {
             isWaitingItem = false;
-            LetsTalk(0);
+            LetsTalk();
 
             GameObject go = Instantiate(
                 itemTaker.allItems[numberHaveItem - 1].gameObject, 
@@ -62,6 +62,7 @@ public class npc : MonoBehaviour
         if (collision.TryGetComponent(out PlayerMover _))      
             if (Input.GetKey(KeyCode.R) && isWaitingItem)
             {
+                dialogueDisplayer.numberDialogue = numberOfDialog;
                 foreach (Transform room in rooms)
                     if (room.gameObject.activeSelf) currentRoom = room;
                 GiveItem();
