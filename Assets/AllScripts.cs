@@ -60,9 +60,19 @@ public class AllScripts : MonoBehaviour
             roomFour,
             2,
             1,
+            0);
+
+        spawn.SpawnItem(2, new Vector3(1, 1, 0), roomThree);
+
+        spawn.SpawnNpc(
+            2,
+            new Vector3(3, 1, 0),
+            roomFour,
+            1,
+            2,
             1);
 
-        spawn.SpawnItem(3, new Vector3(1, 1, 0), roomThree);
+        spawn.SpawnItem(2, new Vector3(2, 1, 0), roomThree);
     }
 
     void FirstTwo()
