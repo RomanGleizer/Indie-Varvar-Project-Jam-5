@@ -15,6 +15,11 @@ public class DialogueDisplayer : MonoBehaviour
 
     [SerializeField] public int numberDialogue;
 
+    [SerializeField] private Camera cam;
+    [SerializeField] private AudioClip childBg;
+    [SerializeField] private AudioClip defaultClip;
+    [SerializeField] private AudioClip childClip;
+
     private void Start()
     {
         dialogueBox.SetActive(false);
@@ -26,6 +31,28 @@ public class DialogueDisplayer : MonoBehaviour
     {
         if (phrase.text == NpcDialogs[0].dialogueLines[0].dialogue)
             if (pm.isCurrentNpcChild) rooms.GetChild(3).GetChild(1).GetComponent<AudioSource>().Play();
+        if (phrase.text == NpcDialogs[0].dialogueLines[0].dialogue && pm.isCurrentNpcChild)
+        {
+            rooms.GetChild(3).GetChild(1).GetComponent<AudioSource>().Play();
+            cam.GetComponent<AudioSource>().clip = null;
+            cam.GetComponent<AudioSource>().PlayOneShot(childBg);
+        }
+
+        if (phrase.text == NpcDialogs[0].dialogueLines[NpcDialogs[0].dialogueLines.Length - 1].dialogue)
+        {
+            rooms.GetChild(3).GetChild(1).GetComponent<AudioSource>().enabled = false;
+            cam.GetComponent<AudioSource>().Stop();
+            cam.GetComponent<AudioSource>().PlayOneShot(defaultClip);
+        }
+
+        if (phrase.text == NpcDialogs[1].dialogueLines[0].dialogue)
+        {
+            if (pm.isCurrentNpcChild)
+            {
+                rooms.GetChild(3).GetChild(2).GetComponent<AudioSource>().Play();
+                pm.isCurrentNpcGirl = false;
+            }
+        }
     }
 
     private void FixedUpdate()
