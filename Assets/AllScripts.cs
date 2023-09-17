@@ -66,7 +66,7 @@ public class AllScripts : MonoBehaviour
             2,
             2,
             1);
-        spawn.SpawnItem(2, new Vector3(1, 1, 0), roomThree);
+        spawn.SpawnItem(2, new Vector3(1, 1, 0), roomOne);
 
         spawn.SpawnNpc(
             1,
@@ -75,7 +75,7 @@ public class AllScripts : MonoBehaviour
             1,
             1,
             2);
-        spawn.SpawnItem(1, new Vector3(2, 1, 0), roomTwo);
+        spawn.SpawnItem(1, new Vector3(2, 1, 0), roomOne);
 
         spawn.SpawnNpc(
             3,
@@ -84,7 +84,7 @@ public class AllScripts : MonoBehaviour
             3,
             3,
             3);
-        spawn.SpawnItem(3, new Vector3(1, 1, 0), roomFour);
+        spawn.SpawnItem(3, new Vector3(1, 1, 0), roomOne);
     }
 
     void FirstTwo()

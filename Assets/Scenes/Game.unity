@@ -826,7 +826,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: -0.019314617}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -837,7 +837,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.6663165}
   m_EdgeRadius: 0
 --- !u!114 &365001399
 MonoBehaviour:
@@ -883,9 +883,9 @@ MonoBehaviour:
   inventorySprite: {fileID: 969920523}
   allTypeOfItems:
   - {fileID: 21300000, guid: 0f7dde233e39c3446ae0ab11cdc9f922, type: 3}
-  - {fileID: 21300000, guid: c08d8e323cb605b41add2340fd8a71ba, type: 3}
-  - {fileID: 21300000, guid: c5b5db97a4470bf4a987b2fa7a6e3c90, type: 3}
-  - {fileID: 21300000, guid: 3d21589d8b87565478a963695b46d29f, type: 3}
+  - {fileID: 690097647, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
+  - {fileID: -559737698, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
+  - {fileID: -180215133, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
   isArmBusy: 0
   rooms: {fileID: 1699768976}
   typeItemInArm: 0
