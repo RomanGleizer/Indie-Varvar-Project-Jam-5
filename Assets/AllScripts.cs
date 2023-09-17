@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AllScripts : MonoBehaviour
 {
@@ -9,37 +11,44 @@ public class AllScripts : MonoBehaviour
     [SerializeField] public Transform roomThree;
     [SerializeField] public Transform roomFour;
     [SerializeField] public Transform roomFive;
-    [SerializeField] Spawn spawn;
+    
+    private Spawn spawn;
 
     void Start()
     {
+        spawn = GetComponent<Spawn>();
         FirstCycle();
     }
 
     void FirstCycle()
     {
-        spawn.SpawnNpc(
-            1, 
-            new Vector3(5, 2, 0),
-            roomOne,
-            1,
-            2,
-            1);
+        // Ориентир на спрайта
+
+        //spawn.SpawnNpc(
+        //    1, 
+        //    new Vector3(5, 2, 0),
+        //    roomOne,
+        //    1,
+        //    2,
+        //    1,
+        //    0);
 
         spawn.SpawnNpc(
             1,
-            new Vector3(7, 2, 0),
+            new Vector3(3, 2, 0),
             roomOne,
             1,
             2,
+            1,
             1);
 
-        spawn.SpawnNpc(
-            1,
-            new Vector3(9, 2, 0),
-            roomOne,
-            1,
-            2,
-            1);
+        //spawn.SpawnNpc(
+        //    1,
+        //    new Vector3(9, 2, 0),
+        //    roomOne,
+        //    1,
+        //    2,
+        //    1,
+        //    2);
     }
 }

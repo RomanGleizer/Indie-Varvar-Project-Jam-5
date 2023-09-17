@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Spawn : MonoBehaviour
@@ -6,7 +7,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] private npc[] allNpc;
     [SerializeField] private Transform rooms;
     [SerializeField] private DialogueDisplayer dialogueDisplayer;
-    //[SerializeField] private TaskCreator taskCreator;
+    [SerializeField] private Transform tasks;
 
     public void SpawnItem(int numberOfTypeItem, Vector3 location, Transform room)
     {
@@ -18,13 +19,17 @@ public class Spawn : MonoBehaviour
         thisItem.NumberOfType = numberOfTypeItem;
     }
 
-    public void SpawnNpc(int numberOfTypeNpc, Vector3 location, Transform room, int neededItem, int havingItem, int numbDial)
+    public void SpawnNpc(int numberOfTypeNpc, Vector3 location, Transform room, int neededItem, int havingItem, int numbDial, int index)
     {
          npc thisNpc = Instantiate(
-                allNpc[numberOfTypeNpc - 1].GetComponent<npc>(),
+                allNpc[numberOfTypeNpc - 1],
                 location,
                 gameObject.transform.rotation,
                 room);
+
+        tasks.GetChild(index).gameObject.SetActive(true);
+        tasks.GetChild(index).GetComponent<TextMeshProUGUI>().text = thisNpc.GetComponent<TaskCreator>().taskDescription;
+
         thisNpc.numberWantedItem = neededItem;
         thisNpc.numberHaveItem = havingItem;
         thisNpc.rooms = rooms;

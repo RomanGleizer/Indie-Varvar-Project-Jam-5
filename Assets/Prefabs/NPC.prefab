@@ -215,9 +215,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfDialog: 0
   isWaitingItem: 1
-  dialogueDisplayer: {fileID: 0}
-  itemTaker: {fileID: 0}
-  rooms: {fileID: 0}
+  dialogueDisplayer: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+  itemTaker: {fileID: 6108944743581852410, guid: 4f6ede66621770d4e87914506b6f875c, type: 3}
+  rooms: {fileID: 8759501652651715627, guid: 49f7e0e64e22788469d2884c6c6ebbf0, type: 3}
   essentialItem: {fileID: 8285190911994747943, guid: 8f5d382962152b14eae9e95dd2ceb579, type: 3}
   numberWantedItem: 1
   numberHaveItem: 2
@@ -233,6 +233,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13df7ada6d1f04544884eb388eed2c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskText: {fileID: 0}
-  taskDescription: "\u041F\u0440\u0438\u043D\u0435\u0441\u0442\u0438 \u0441\u0438\u043D\u0438\u0439
-    \u043F\u043B\u0430\u0442\u043E\u043A"
+  taskDescription: 

@@ -20,9 +20,7 @@ public class npc : MonoBehaviour
     private void Awake()
     {
         currentRoom = GetComponent<Transform>();
-        // Пока что цвет. Но потом будем менять изображение
         gameObject.transform.GetChild(0).GetComponent<Image>().color = essentialItem.GetComponent<Image>().color;
-
     }
 
     private void Update()
@@ -43,7 +41,7 @@ public class npc : MonoBehaviour
             isWaitingItem = false;
             LetsTalk();
 
-            GameObject go = Instantiate(
+            var go = Instantiate(
                 itemTaker.allItems[numberHaveItem - 1].gameObject, 
                 new Vector3(gameObject.transform.position.x + 1f, gameObject.transform.position.y, gameObject.transform.position.z), 
                 gameObject.transform.rotation, 
