@@ -888,6 +888,7 @@ MonoBehaviour:
   allItems:
   - {fileID: 4907259837146717044, guid: 8f5d382962152b14eae9e95dd2ceb579, type: 3}
   - {fileID: 2782752357403660736, guid: 172431a8b3115c54b9c74946deae9ac1, type: 3}
+  - {fileID: 2782752357403660736, guid: 172431a8b3115c54b9c74946deae9ac1, type: 3}
 --- !u!95 &365001402
 Animator:
   serializedVersion: 5
@@ -2317,7 +2318,6 @@ MonoBehaviour:
   - {fileID: 4241382891382381998, guid: 2e53f760a74a1de42a7909a52a97970d, type: 3}
   rooms: {fileID: 1699768976}
   dialogueDisplayer: {fileID: 784483464}
-  tasks: {fileID: 0}
 --- !u!114 &1196975818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2343,8 +2343,8 @@ MonoBehaviour:
   fourSceneVoice: {fileID: 11400000, guid: abf0e866af09198408540c2f3cab7e0d, type: 2}
   fiveSceneVoice: {fileID: 11400000, guid: efde3dde397b6064ca95021817e972ac, type: 2}
   endSceneVoice: {fileID: 11400000, guid: 93cc7b78da0655044b5b6f7f4394d8ad, type: 2}
-  sprite: {fileID: 0}
-  _rooms: {fileID: 0}
+  sprite: {fileID: 365001393}
+  _rooms: {fileID: 1699768976}
 --- !u!1 &1361780925
 GameObject:
   m_ObjectHideFlags: 0

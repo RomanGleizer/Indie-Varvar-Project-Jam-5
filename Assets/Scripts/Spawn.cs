@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] private npc[] allNpc;
     [SerializeField] private Transform rooms;
     [SerializeField] private DialogueDisplayer dialogueDisplayer;
-    [SerializeField] private Transform tasks;
+    //[SerializeField] private Transform tasks;
 
     public void SpawnItem(int numberOfTypeItem, Vector3 location, Transform room)
     {
