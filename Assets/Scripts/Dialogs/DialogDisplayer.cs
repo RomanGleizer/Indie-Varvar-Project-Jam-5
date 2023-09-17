@@ -7,7 +7,7 @@ public class DialogueDisplayer : MonoBehaviour
     [SerializeField] public GameObject dialogueBox;
     [SerializeField] private TMP_Text dialogueName;
     [SerializeField] private TMP_Text dialogueText;
-    [SerializeField] private DialogueObject[] NatashaDialogs;
+    [SerializeField] private DialogueObject[] NpcDialogs;
     [SerializeField] private PlayerMover pm;
     [SerializeField] private DialogueObject dialogueObj;
 
@@ -21,7 +21,7 @@ public class DialogueDisplayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        dialogueObj = NatashaDialogs[numberDialogue];
+        dialogueObj = NpcDialogs[numberDialogue];
     }
 
     private IEnumerator MoveThroughDialogue(DialogueObject dialogueObject)

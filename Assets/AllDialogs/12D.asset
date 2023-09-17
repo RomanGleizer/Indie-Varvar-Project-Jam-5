@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcc66642258206849a4ba10059835e3d, type: 3}
-  m_Name: N2
+  m_Name: 12D
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: "5 \u043E\u0447\u043A\u043E\u0432 \u0413\u0440\u0438\u0444\u0444\u0438\u043D\u0434\u043E\u0440\u0443"
-  - dialogue: "\u0438\u043B\u0438 10"
-  - dialogue: "\u0430 \u043B\u0443\u0447\u0448\u0435 \u041F\u0443\u0444\u0444\u0435\u043D\u0434\u0443\u044E"
-  nameWhoTalking: "\u0421\u043D\u043E\u0432\u0430 \u041D\u0430\u0442\u0430\u0448\u0430"
+  - dialogue: "\u041E\u0445...\u0422\u044F\u0436\u0435\u043B\u043E-\u0442\u044F\u0436\u0435\u043B\u043E..."
+  nameWhoTalking: "\u0418"
