@@ -19,6 +19,7 @@ public class StartMenu : MonoBehaviour
     {
         loading.SetActive(false);
         settings.SetActive(false);
+        creators.SetActive(false);
     }
 
     void Update()
