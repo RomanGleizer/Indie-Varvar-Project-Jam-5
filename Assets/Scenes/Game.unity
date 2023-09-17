@@ -867,6 +867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   isCurrentNpcChild: 0
+  isCurrentNpcGirl: 0
 --- !u!114 &365001401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4019,6 +4020,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 365001400}
     - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1196975815}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d9ecfe4d09105541902b055384a9a56, type: 3}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: rooms
+      value: 
+      objectReference: {fileID: 1699768976}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
       propertyPath: spawn
       value: 
       objectReference: {fileID: 1196975817}
@@ -4026,6 +4039,18 @@ PrefabInstance:
       propertyPath: phrase
       value: 
       objectReference: {fileID: 1941343375}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: childBg
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d9ecfe4d09105541902b055384a9a56, type: 3}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: childClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 001726af453a0ce40a7acc08a845d56b, type: 3}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: defaultClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d01277f8c58871e46bc03784b75ef33f, type: 3}
     - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
       propertyPath: dialogueObj
       value: 

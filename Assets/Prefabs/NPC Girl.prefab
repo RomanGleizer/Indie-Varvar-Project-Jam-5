@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 5192663686051030751}
   - component: {fileID: 3600671794097016633}
   - component: {fileID: 6609348343859578098}
+  - component: {fileID: -2250468721181435175}
   m_Layer: 5
   m_Name: NPC Girl
   m_TagString: Untagged
@@ -354,6 +355,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2250468721181435175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420275400605773541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7f1ec0693042446a22d65f7fc7589b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8124244131580251173
 GameObject:
   m_ObjectHideFlags: 0

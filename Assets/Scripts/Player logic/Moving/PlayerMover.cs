@@ -8,6 +8,7 @@ public class PlayerMover : MonoBehaviour
     private Vector2 _movement;
 
     public bool isCurrentNpcChild;
+    public bool isCurrentNpcGirl;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class PlayerMover : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.GetComponent<Child>()) isCurrentNpcChild = true;
+        if (collision.GetComponent<Girl>()) isCurrentNpcGirl = true;
     }
 
     private void FixedUpdate()
