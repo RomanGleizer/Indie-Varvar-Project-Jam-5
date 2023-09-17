@@ -44,6 +44,11 @@ public class DialogueDisplayer : MonoBehaviour
     {
         StartCoroutine(MoveThroughDialogue(dialogueObj));
     }
-    
+
+    public void DisplayDialogueVoice(DialogueObject dialogueObjVoice)
+    {
+        StartCoroutine(MoveThroughDialogue(dialogueObjVoice));
+    }
+
 }
 

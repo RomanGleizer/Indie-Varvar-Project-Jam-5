@@ -11,13 +11,27 @@ public class AllScripts : MonoBehaviour
     [SerializeField] public Transform roomThree;
     [SerializeField] public Transform roomFour;
     [SerializeField] public Transform roomFive;
-    
+    [SerializeField] public DialogueDisplayer dialogueDisplayer;
+    [SerializeField] private DialogueObject zeroSceneVoice;
+    [SerializeField] private DialogueObject firstSceneVoice;
+    [SerializeField] private DialogueObject secondSceneVoice;
+    [SerializeField] private DialogueObject thirdSceneVoice;
+    [SerializeField] private DialogueObject fourSceneVoice;
+    [SerializeField] private DialogueObject fiveSceneVoice;
+    [SerializeField] private DialogueObject endSceneVoice;
+
     private Spawn spawn;
 
     void Start()
     {
         spawn = GetComponent<Spawn>();
+        ZeroCycle();
         FirstCycle();
+    }
+
+    void ZeroCycle()
+    {
+        dialogueDisplayer.DisplayDialogueVoice(zeroSceneVoice);
     }
 
     void FirstCycle()
@@ -50,5 +64,25 @@ public class AllScripts : MonoBehaviour
         //    2,
         //    1,
         //    2);
+    }
+    void SecondCycle()
+    {
+        dialogueDisplayer.DisplayDialogueVoice(secondSceneVoice);
+    }
+    void ThirdCycle()
+    {
+        dialogueDisplayer.DisplayDialogueVoice(thirdSceneVoice);
+    }
+    void FourthCycle()
+    {
+        dialogueDisplayer.DisplayDialogueVoice(fourSceneVoice);
+    }
+    void FifthCycle()
+    {
+        dialogueDisplayer.DisplayDialogueVoice(fiveSceneVoice);
+    }
+    void EndCycle()
+    {
+        dialogueDisplayer.DisplayDialogueVoice(endSceneVoice);
     }
 }
