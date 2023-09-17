@@ -10,7 +10,8 @@ public class DialogueDisplayer : MonoBehaviour
     [SerializeField] private DialogueObject[] NpcDialogs;
     [SerializeField] private PlayerMover pm;
     [SerializeField] private DialogueObject dialogueObj;
-
+    [SerializeField] protected TextMeshProUGUI phrase;
+    [SerializeField] private Transform rooms;
 
     [SerializeField] public int numberDialogue;
 
@@ -18,6 +19,13 @@ public class DialogueDisplayer : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         numberDialogue = 0;
+        InvokeRepeating(nameof(PlayAudio), 1f, 1f);
+    }
+
+    public void PlayAudio()
+    {
+        if (phrase.text == NpcDialogs[0].dialogueLines[0].dialogue)
+            if (pm.isCurrentNpcChild) rooms.GetChild(3).GetChild(1).GetComponent<AudioSource>().Play();
     }
 
     private void FixedUpdate()
