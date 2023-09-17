@@ -19,11 +19,16 @@ public class BetweenRoomsMover : MonoBehaviour
     private bool isFirstCycleWas;
     public bool IsPlayerTouchedTrigger => isPlayerTouchedTrigger;
 
-    private async void Update()
+    private void Start()
+    {
+        InvokeRepeating(nameof(Check), 1f, 1f);
+    }
+
+    private async void Check()
     {
         if (!isFirstCycleWas && isPlayerWasInFirstRoom && isPlayerWasInSecondRoom && isPlayerWasInThirdRoom && isPlayerWasInFourthRoom && isPlayerWasInFifthRoom)
         {
-            await Task.Delay(2000);
+            await Task.Delay(1000);
             isFirstCycleWas = true;
             transform.position = Vector3.zero;
             _rooms.GetChild(0).gameObject.SetActive(true);
