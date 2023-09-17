@@ -27,6 +27,11 @@ public class AllScripts : MonoBehaviour
         ZeroCycle();
     }
 
+    void GarbageItem()
+    {
+        foreach (GameObject obj in FindObjectsOfType(typeof(Item))) Destroy(obj);
+    }
+
     void ZeroCycle()
     {
         dialogueDisplayer.DisplayDialogueVoice(zeroSceneVoice);
@@ -55,24 +60,31 @@ public class AllScripts : MonoBehaviour
     void FirstOne()
     {
         spawn.SpawnNpc(
-            1,
+            2,
             new Vector3(-2, 1, 0),
             roomFour,
             2,
-            1,
-            0);
-
+            2,
+            1);
         spawn.SpawnItem(2, new Vector3(1, 1, 0), roomThree);
 
         spawn.SpawnNpc(
-            2,
-            new Vector3(3, 1, 0),
-            roomFour,
             1,
-            2,
-            1);
+            new Vector3(3, 1, 0),
+            roomFive,
+            1,
+            1,
+            2);
+        spawn.SpawnItem(1, new Vector3(2, 1, 0), roomTwo);
 
-        spawn.SpawnItem(2, new Vector3(2, 1, 0), roomThree);
+        spawn.SpawnNpc(
+            3,
+            new Vector3(-2, 1, 0),
+            roomThree,
+            3,
+            3,
+            3);
+        spawn.SpawnItem(3, new Vector3(1, 1, 0), roomFour);
     }
 
     void FirstTwo()
