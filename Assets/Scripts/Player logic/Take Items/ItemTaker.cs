@@ -3,26 +3,37 @@ using UnityEngine.UI;
 
 public class ItemTaker : MonoBehaviour
 {
+    [SerializeField] private Sprite emptyInventorySprite;
     [SerializeField] private Image inventorySprite;
     [SerializeField] private Sprite[] allTypeOfItems;
     [SerializeField] private bool isArmBusy = false;
     [SerializeField] private Transform rooms;
+    [SerializeField] private Spawn spawn;
     
-    public int typeItemInArm = 0;
-    public Item[] allItems;
-
+    private int typeItemInArm;
     private Transform currentRoom;
 
     public Transform CurrentRoom => currentRoom;
+
+    public int TypeInArm => typeItemInArm;
+
+    public Sprite[] AllTypeOfItems => allTypeOfItems;
 
     private void Awake()
     {
         currentRoom = GetComponent<Transform>();
     }
 
+    private void Update()
+    {
+        DropItem();
+    }
+
     public void TakeItem(Item item)
     {
         if (!isArmBusy) ChangeInventory(item);
+        typeItemInArm = item.TypeNumber;
+        isArmBusy = true;
     }
 
     public void DropItem()
@@ -32,13 +43,14 @@ public class ItemTaker : MonoBehaviour
         if (Input.GetKey(KeyCode.Q))
         {
             foreach (Transform room in rooms)
-                if (room.gameObject.activeSelf) currentRoom = room;
+                if (room.gameObject.activeSelf)
+                {
+                    currentRoom = room;
+                    break;
+                }
 
-            Instantiate(allItems[typeItemInArm - 1].GetComponent<Image>(),
-                    gameObject.transform.position, 
-                    gameObject.transform.rotation,
-                    currentRoom);
-
+            var droppedItem = spawn.Items[typeItemInArm].GetComponent<Image>();
+            Instantiate(droppedItem, gameObject.transform.position, Quaternion.identity, currentRoom);
             DestroyItemFromInventory();
         }
     }
@@ -48,20 +60,19 @@ public class ItemTaker : MonoBehaviour
         if (collision.TryGetComponent(out Item item))
             if (Input.GetKey(KeyCode.E)) TakeItem(item);
 
-        if (collision.TryGetComponent(out Floor _)) DropItem();
+        // if (collision.TryGetComponent(out Floor _)) DropItem();
     }
 
     public void ChangeInventory(Item item)
     {
-        inventorySprite.sprite = allTypeOfItems[item.NumberOfType];
-        typeItemInArm = item.NumberOfType;
+        inventorySprite.sprite = allTypeOfItems[item.TypeNumber];
+        typeItemInArm = item.TypeNumber;
         Destroy(item.gameObject);
-        isArmBusy = true;
     }
 
     public void DestroyItemFromInventory()
     {
-        inventorySprite.sprite = allTypeOfItems[0];
+        inventorySprite.sprite = emptyInventorySprite;
         typeItemInArm = 0;
         isArmBusy = false;
     }

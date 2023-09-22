@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,7 +17,7 @@ public class menu : MonoBehaviour
         Time.timeScale = 1;
         pause.SetActive(false);
         settings.SetActive(false);
-        mistake.SetActive(false); //Поменять!!!!
+        mistake.SetActive(false);
     }
 
     private void Update()
@@ -44,7 +43,7 @@ public class menu : MonoBehaviour
             }
             else if (!inSettings && !inPause && inSaving)
             {
-                mistake.SetActive(false); //Поменять!!!!
+                mistake.SetActive(false);
                 pause.SetActive(true);
                 inSaving = false;
             }
@@ -67,7 +66,7 @@ public class menu : MonoBehaviour
     {
         inSaving = true;
         pause.SetActive(false);
-        mistake.SetActive(true); //Поменять!!!!
+        mistake.SetActive(true);
     }
 
     public void BackToStart()
