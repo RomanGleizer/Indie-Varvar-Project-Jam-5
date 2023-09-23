@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +14,7 @@ public class Npc : MonoBehaviour
     [SerializeField] private ItemTaker itemTaker;
     [SerializeField] private Transform rooms;
     [SerializeField] private Sprite essentialItem;
+
 
     private Transform currentRoom;
     private int dialogCounter;
@@ -48,17 +51,7 @@ public class Npc : MonoBehaviour
     {
         if (collision.TryGetComponent(out PlayerMover _))
             if (Input.GetKey(KeyCode.R) && isWaitingItem)
-            {
                 StartCoroutine(dialogueDisplayer.MoveThroughDialogue(npcDialogues.GirlDialogs[dialogCounter]));
-
-                foreach (Transform room in rooms)
-                    if (room.gameObject.activeSelf)
-                    {
-                        currentRoom = room;
-                        break;
-                    }
-
-                // GiveItem();
-            }
+        // GiveItem();
     }
 }
