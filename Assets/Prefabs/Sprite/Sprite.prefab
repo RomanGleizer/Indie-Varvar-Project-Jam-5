@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1078938816197681162}
   - component: {fileID: 1450095077849972742}
   - component: {fileID: 8638698685436010947}
+  - component: {fileID: 6294709694596999842}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -109,7 +110,6 @@ MonoBehaviour:
   - {fileID: -559737698, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
   - {fileID: 690097647, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
   - {fileID: -180215133, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
-  isArmBusy: 0
   rooms: {fileID: 0}
   spawn: {fileID: 0}
 --- !u!50 &6113910254444506026
@@ -245,3 +245,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6294709694596999842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083173746189357368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144e8ced523266746b3775d85ad788e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcDialogues: {fileID: 0}
+  dialogueDisplayer: {fileID: 0}

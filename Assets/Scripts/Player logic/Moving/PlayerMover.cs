@@ -35,6 +35,6 @@ public class PlayerMover : MonoBehaviour
 
     private void ResetSpeed()
     {
-        if (speed > 2.5f) speed = 5f;
+        if (speed > 5f) speed = 5f;
     }
 }

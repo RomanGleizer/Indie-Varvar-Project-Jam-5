@@ -367,6 +367,9 @@ MonoBehaviour:
   itemTaker: {fileID: 2737012419680853902, guid: 2d056e0cbb8fc434b853d6f58a73d021, type: 3}
   rooms: {fileID: 8759501652651715627, guid: 49f7e0e64e22788469d2884c6c6ebbf0, type: 3}
   essentialItem: {fileID: -559737698, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
+  dialogueBox: {fileID: 245230303525962579, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+  dialogueName: {fileID: 1382663464759660957, guid: ee5b1f6e547f4cc4caf73a05d2062183, type: 3}
+  dialogueText: {fileID: 2802157607967780023, guid: 089cd1e4160ece949b7e2f1b0778d3ce, type: 3}
 --- !u!1 &8124244131580251173
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,11 +6,11 @@ public class ItemTaker : MonoBehaviour
     [SerializeField] private Sprite emptyInventorySprite;
     [SerializeField] private Image inventorySprite;
     [SerializeField] private Sprite[] allTypeOfItems;
-    [SerializeField] private bool isArmBusy = false;
     [SerializeField] private Transform rooms;
     [SerializeField] private Spawn spawn;
-    
+
     private int typeItemInArm;
+    private bool isArmBusy;
     private Transform currentRoom;
 
     public Transform CurrentRoom => currentRoom;
@@ -22,21 +22,17 @@ public class ItemTaker : MonoBehaviour
     private void Awake()
     {
         currentRoom = GetComponent<Transform>();
+        InvokeRepeating(nameof(DropItem), 0.1f, 0.1f);
     }
 
-    private void Update()
-    {
-        DropItem();
-    }
-
-    public void TakeItem(Item item)
+    private void TakeItem(Item item)
     {
         if (!isArmBusy) ChangeInventory(item);
         typeItemInArm = item.TypeNumber;
         isArmBusy = true;
     }
 
-    public void DropItem()
+    private void DropItem()
     {
         if (!isArmBusy) return;
         
@@ -59,18 +55,16 @@ public class ItemTaker : MonoBehaviour
     {
         if (collision.TryGetComponent(out Item item))
             if (Input.GetKey(KeyCode.E)) TakeItem(item);
-
-        // if (collision.TryGetComponent(out Floor _)) DropItem();
     }
 
-    public void ChangeInventory(Item item)
+    private void ChangeInventory(Item item)
     {
         inventorySprite.sprite = allTypeOfItems[item.TypeNumber];
         typeItemInArm = item.TypeNumber;
         Destroy(item.gameObject);
     }
 
-    public void DestroyItemFromInventory()
+    private void DestroyItemFromInventory()
     {
         inventorySprite.sprite = emptyInventorySprite;
         typeItemInArm = 0;

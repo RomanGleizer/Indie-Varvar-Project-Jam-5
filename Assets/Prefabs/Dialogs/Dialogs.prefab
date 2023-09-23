@@ -49,4 +49,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3ca83317ebf842841894ead1b2f02498, type: 2}
   - {fileID: 11400000, guid: 31a072cdfa038e547b09dfa15012c2b7, type: 2}
   - {fileID: 11400000, guid: ba5cff7f38cb9e64c9faf90590db930e, type: 2}
+  - {fileID: 11400000, guid: 8e278bb9d6ebc8e4493efe7d2d3d9359, type: 2}
+  - {fileID: 11400000, guid: 3bfcbc97a27d8794d88f81bb7bc37868, type: 2}
   oldManDialogs: []

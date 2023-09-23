@@ -25,7 +25,7 @@ public class AllScripts : MonoBehaviour
 
     private void ZeroCycle()
     {
-        dialogueDisplayer.DisplayDialogueVoice(voices[0]);
+        dialogueDisplayer.DisplayDialogue(voices[0]);
     }
 
     public void FirstCycle()
@@ -33,15 +33,6 @@ public class AllScripts : MonoBehaviour
         DoCycle(voices[1]);
         ActivateFirstPart();
     }
-
-    //public void FirstCycle()
-    //{
-    //    SwitchRooms();
-    //    sprite.transform.position = Vector3.zero;
-    //    dialogueDisplayer.DisplayDialogueVoice(firstSceneVoice);
-
-    //    FirstOne();
-    //}
 
     private void ActivateFirstPart()
     {
@@ -94,7 +85,7 @@ public class AllScripts : MonoBehaviour
     {
         SwitchRooms();
         sprite.transform.position = Vector3.zero;
-        dialogueDisplayer.DisplayDialogueVoice(dialogue);
+        dialogueDisplayer.DisplayDialogue(dialogue);
     }
 
     private void SwitchRooms()

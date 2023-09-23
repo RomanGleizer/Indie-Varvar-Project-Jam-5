@@ -6,15 +6,14 @@ public class Npc : MonoBehaviour
     [SerializeField] private int numberOfDialog;
     [SerializeField] private int numberWantedItem;
     [SerializeField] private bool isWaitingItem;
-    // [SerializeField] private int numberHaveItem;
     [SerializeField] private DialogueDisplayer dialogueDisplayer;
     [SerializeField] private NpcDialogs npcDialogues;
     [SerializeField] private ItemTaker itemTaker;
     [SerializeField] private Transform rooms;
     [SerializeField] private Sprite essentialItem;
 
+
     private Transform currentRoom;
-    private int dialogCounter;
 
     public Transform CurrentRoom => currentRoom;
 
@@ -42,23 +41,5 @@ public class Npc : MonoBehaviour
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
         
         // itemTaker.DestroyItemFromInventory();
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent(out PlayerMover _))
-            if (Input.GetKey(KeyCode.R) && isWaitingItem)
-            {
-                StartCoroutine(dialogueDisplayer.MoveThroughDialogue(npcDialogues.GirlDialogs[dialogCounter]));
-
-                foreach (Transform room in rooms)
-                    if (room.gameObject.activeSelf)
-                    {
-                        currentRoom = room;
-                        break;
-                    }
-
-                // GiveItem();
-            }
     }
 }
