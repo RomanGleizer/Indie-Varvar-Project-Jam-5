@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 7972342036476574856}
   - component: {fileID: 5192663686051030751}
   - component: {fileID: 3600671794097016633}
-  - component: {fileID: -5586901191384733718}
   m_Layer: 5
   m_Name: NPC Old man
   m_TagString: Untagged
@@ -237,25 +236,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-5586901191384733718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7420275400605773541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea15e11a0fb256140b916c498b860c5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfDialog: 0
-  numberWantedItem: 0
-  dialogueDisplayer: {fileID: 0}
-  npcDialogues: {fileID: 0}
-  itemTaker: {fileID: 0}
-  rooms: {fileID: 0}
-  essentialItem: {fileID: 0}
 --- !u!1 &8124244131580251173
 GameObject:
   m_ObjectHideFlags: 0
