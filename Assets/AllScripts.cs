@@ -24,29 +24,29 @@ public class AllScripts : MonoBehaviour
     }
 
     private void ZeroCycle()
-    {
-        dialogueDisplayer.DisplayDialogue(voices[0]);
-    }
+        => StartCoroutine(dialogueDisplayer.MoveThroughDialogue(voices[0]));
 
     public void FirstCycle()
     {
         DoCycle(voices[1]);
-        ActivateFirstPart();
+
+        GenerateObjects(
+            new NpcData(1, 1, 1, 2, roomFive, new Vector3(3, 1, 0)), 
+            new ItemData(1, roomOne, new Vector3(2, 1, 0)));
+
+        GenerateObjects(
+            new NpcData(2, 2, 2, 1, roomFour, new Vector3(-2, 1, 0)),
+            new ItemData(2, roomOne, new Vector3(1, 1, 0)));
+
+        GenerateObjects(
+            new NpcData(3, 3, 3, 3, roomThree, new Vector3(-2, 1, 0)),
+            new ItemData(3, roomOne, new Vector3(1, 1, 0)));
     }
 
-    private void ActivateFirstPart()
+    private void GenerateObjects(NpcData npcData, ItemData itemData)
     {
-        spawn.SpawnNpc(new NpcData(1, 1, 1, 2, roomFive, new Vector3(3, 1, 0)));
-        spawn.SpawnItem(new ItemData(1, roomOne, new Vector3(2, 1, 0)));
-
-        // .SpawnNpc(new NpcData(2, 2, 2, 1, roomFour, new Vector3(-2, 1, 0)));
-        // spawn.SpawnItem(new ItemData(2, roomOne, new Vector3(1, 1, 0)));
-
-        // spawn.SpawnNpc(new NpcData(1, 1, 1, 2, roomFive, new Vector3(3, 1, 0)));
-        // spawn.SpawnItem(new ItemData(1, roomOne, new Vector3(2, 1, 0)));
-
-        // spawn.SpawnNpc(new NpcData(3, 3, 3, 3, roomThree, new Vector3(-2, 1, 0)));
-        // spawn.SpawnItem(new ItemData(3, roomOne, new Vector3(1, 1, 0)));
+        spawn.SpawnNpc(npcData);
+        spawn.SpawnItem(itemData);
     }
 
     //private void FirstTwo()
@@ -85,7 +85,7 @@ public class AllScripts : MonoBehaviour
     {
         SwitchRooms();
         sprite.transform.position = Vector3.zero;
-        dialogueDisplayer.DisplayDialogue(dialogue);
+        StartCoroutine(dialogueDisplayer.MoveThroughDialogue(dialogue));
     }
 
     private void SwitchRooms()

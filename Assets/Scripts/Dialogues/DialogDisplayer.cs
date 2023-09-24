@@ -10,22 +10,16 @@ public class DialogueDisplayer : MonoBehaviour
 
     public IEnumerator MoveThroughDialogue(DialogueObject dialogueObject)
     {
-        dialogueName.text = dialogueObject.nameWhoTalking;
+        dialogueBox.SetActive(true);
+        dialogueName.text = dialogueObject.Name;
+
         for (int i = 0; i < dialogueObject.dialogueLines.Length; i++)
         {
             dialogueText.text = dialogueObject.dialogueLines[i].dialogue;
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            yield return null;
         }
 
-        HideDialogField();
-    }
-
-    public void HideDialogField()
-    {
         dialogueBox.SetActive(false);
-        print('f');
     }
-
-    public void DisplayDialogue(DialogueObject dialogueObjVoice)
-        => StartCoroutine(MoveThroughDialogue(dialogueObjVoice));
 }

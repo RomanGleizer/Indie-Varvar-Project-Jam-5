@@ -1,6 +1,5 @@
 using System.Linq;
 using System.Threading.Tasks;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class BetweenRoomsMover : MonoBehaviour
@@ -24,7 +23,7 @@ public class BetweenRoomsMover : MonoBehaviour
     {
         if (!isFirstCycleStarted && roomStates.All(x => x == true))
         {
-            await Task.Delay(1000);
+            await Task.Delay(500);
             isFirstCycleStarted = true;
             allScripts.FirstCycle();
         }

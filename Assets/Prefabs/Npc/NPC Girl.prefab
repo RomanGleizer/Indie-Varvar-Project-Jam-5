@@ -1,81 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1368172454772775282
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5698660389869773336}
-  - component: {fileID: 8858343147331790768}
-  - component: {fileID: 5740945058374951148}
-  m_Layer: 5
-  m_Name: Mishka Frede)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &5698660389869773336
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368172454772775282}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6203383238653573348}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 121}
-  m_SizeDelta: {x: 59.4805, y: 63.7064}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8858343147331790768
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368172454772775282}
-  m_CullTransparentMesh: 1
---- !u!114 &5740945058374951148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368172454772775282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7420275400605773541
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,11 +12,10 @@ GameObject:
   - component: {fileID: 7657776633612896517}
   - component: {fileID: 3411050511629002241}
   - component: {fileID: 7972342036476574856}
-  - component: {fileID: 5192663686051030751}
   - component: {fileID: 3600671794097016633}
   - component: {fileID: 6609348343859578098}
   - component: {fileID: -7720819647411613555}
-  - component: {fileID: 4618157966406063529}
+  - component: {fileID: 5970467512321436657}
   m_Layer: 5
   m_Name: NPC Girl
   m_TagString: Untagged
@@ -113,7 +36,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2132557854216224393}
-  - {fileID: 5698660389869773336}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -205,19 +127,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 258.24542, y: 262.0424}
   m_EdgeRadius: 0
---- !u!114 &5192663686051030751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7420275400605773541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13df7ada6d1f04544884eb388eed2c47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  taskDescription: 
 --- !u!95 &3600671794097016633
 Animator:
   serializedVersion: 5
@@ -347,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de7f1ec0693042446a22d65f7fc7589b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4618157966406063529
+--- !u!114 &5970467512321436657
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,20 +265,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7420275400605773541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea15e11a0fb256140b916c498b860c5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 832b4f8bacb584243a7b4943b8d7aadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfDialog: 0
   numberWantedItem: 0
-  isWaitingItem: 0
-  dialogueDisplayer: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
-  npcDialogues: {fileID: 2829291869822793023, guid: 0638d8c456f26784e9350792751a804f, type: 3}
-  itemTaker: {fileID: 2737012419680853902, guid: 2d056e0cbb8fc434b853d6f58a73d021, type: 3}
-  rooms: {fileID: 8759501652651715627, guid: 49f7e0e64e22788469d2884c6c6ebbf0, type: 3}
   essentialItem: {fileID: -559737698, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
-  dialogueBox: {fileID: 245230303525962579, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
-  dialogueName: {fileID: 1382663464759660957, guid: ee5b1f6e547f4cc4caf73a05d2062183, type: 3}
-  dialogueText: {fileID: 2802157607967780023, guid: 089cd1e4160ece949b7e2f1b0778d3ce, type: 3}
 --- !u!1 &8124244131580251173
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,8 +305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9, y: 126}
-  m_SizeDelta: {x: 59.4805, y: 63.7064}
+  m_AnchoredPosition: {x: 1.3698, y: 129.06775}
+  m_SizeDelta: {x: 75.979, y: 69.842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6617565675477854736
 CanvasRenderer:
@@ -429,14 +329,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -559737698, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

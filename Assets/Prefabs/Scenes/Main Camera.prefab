@@ -150,9 +150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npc:
-  - {fileID: 4618157966406063529, guid: 3cd28d50f629f2a488c122eebabf225c, type: 3}
-  - {fileID: 5536259433413101478, guid: 80c23e15114ae9b408370ce599414244, type: 3}
-  - {fileID: -5586901191384733718, guid: 2e53f760a74a1de42a7909a52a97970d, type: 3}
+  - {fileID: 5970467512321436657, guid: 3cd28d50f629f2a488c122eebabf225c, type: 3}
+  - {fileID: 2310415230282264799, guid: 80c23e15114ae9b408370ce599414244, type: 3}
+  - {fileID: 7747563987948043083, guid: 2e53f760a74a1de42a7909a52a97970d, type: 3}
   itemsForSpawn:
   - {fileID: 2782752357403660736, guid: 172431a8b3115c54b9c74946deae9ac1, type: 3}
   - {fileID: 4907259837146717044, guid: 8f5d382962152b14eae9e95dd2ceb579, type: 3}

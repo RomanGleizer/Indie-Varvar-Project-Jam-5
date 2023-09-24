@@ -1,81 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1368172454772775282
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5698660389869773336}
-  - component: {fileID: 8858343147331790768}
-  - component: {fileID: 5740945058374951148}
-  m_Layer: 5
-  m_Name: Mishka Frede)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &5698660389869773336
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368172454772775282}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6203383238653573348}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.900057, y: 105.71231}
-  m_SizeDelta: {x: 59.4805, y: 63.7064}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8858343147331790768
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368172454772775282}
-  m_CullTransparentMesh: 1
---- !u!114 &5740945058374951148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368172454772775282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7420275400605773541
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,9 +12,8 @@ GameObject:
   - component: {fileID: 7657776633612896517}
   - component: {fileID: 3411050511629002241}
   - component: {fileID: 7972342036476574856}
-  - component: {fileID: 5192663686051030751}
   - component: {fileID: 3600671794097016633}
-  - component: {fileID: -5586901191384733718}
+  - component: {fileID: 7747563987948043083}
   m_Layer: 5
   m_Name: NPC Old man
   m_TagString: Untagged
@@ -105,20 +28,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7420275400605773541}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -12150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2132557854216224393}
-  - {fileID: 5698660389869773336}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 607.6941, y: -144.33673}
-  m_SizeDelta: {x: 114.7223, y: 79.7966}
+  m_AnchoredPosition: {x: -308.32, y: 156.29}
+  m_SizeDelta: {x: 195.38, y: 123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7657776633612896517
 CanvasRenderer:
@@ -203,19 +125,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 258.24542, y: 262.0424}
   m_EdgeRadius: 0
---- !u!114 &5192663686051030751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7420275400605773541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13df7ada6d1f04544884eb388eed2c47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  taskDescription: 
 --- !u!95 &3600671794097016633
 Animator:
   serializedVersion: 5
@@ -237,7 +146,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-5586901191384733718
+--- !u!114 &7747563987948043083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,16 +155,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7420275400605773541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea15e11a0fb256140b916c498b860c5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 832b4f8bacb584243a7b4943b8d7aadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfDialog: 0
-  numberWantedItem: 0
-  dialogueDisplayer: {fileID: 0}
-  npcDialogues: {fileID: 0}
-  itemTaker: {fileID: 0}
-  rooms: {fileID: 0}
-  essentialItem: {fileID: 0}
+  numberWantedItem: 2
+  essentialItem: {fileID: -180215133, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
 --- !u!1 &8124244131580251173
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,8 +195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -52, y: 100.1}
-  m_SizeDelta: {x: 44.6756, y: 45.8534}
+  m_AnchoredPosition: {x: -53.1, y: 93.8}
+  m_SizeDelta: {x: 46.7084, y: 50.1213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6617565675477854736
 CanvasRenderer:
@@ -315,14 +219,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -180215133, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

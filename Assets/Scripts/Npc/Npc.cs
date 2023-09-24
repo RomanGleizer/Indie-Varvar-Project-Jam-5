@@ -3,15 +3,8 @@ using UnityEngine.UI;
 
 public class Npc : MonoBehaviour
 {
-    [SerializeField] private int numberOfDialog;
     [SerializeField] private int numberWantedItem;
-    [SerializeField] private bool isWaitingItem;
-    [SerializeField] private DialogueDisplayer dialogueDisplayer;
-    [SerializeField] private NpcDialogs npcDialogues;
-    [SerializeField] private ItemTaker itemTaker;
-    [SerializeField] private Transform rooms;
     [SerializeField] private Sprite essentialItem;
-
 
     private Transform currentRoom;
 
@@ -19,16 +12,15 @@ public class Npc : MonoBehaviour
 
     private void Awake()
     {
-        isWaitingItem = true;
         currentRoom = GetComponent<Transform>();
-        transform.GetChild(1).GetComponent<Image>().sprite = essentialItem;
+        transform.GetChild(0).GetComponent<Image>().sprite = essentialItem;
     }
 
     private void GiveItem()
     {
-        if (numberWantedItem != itemTaker.TypeInArm) return;
+        //if (numberWantedItem != itemTaker.TypeInArm) return;
 
-        isWaitingItem = false;
+        //isWaitingItem = false;
 
         //Instantiate(
         //    itemTaker.AllTypeOfItems[numberHaveItem - 1].gameObject,
@@ -37,8 +29,6 @@ public class Npc : MonoBehaviour
         //    currentRoom);
 
         //numberHaveItem = 0;
-        
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
         
         // itemTaker.DestroyItemFromInventory();
     }

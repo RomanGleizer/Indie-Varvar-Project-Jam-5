@@ -171,7 +171,7 @@ RectTransform:
   - {fileID: 6534257810978087276}
   - {fileID: 5493068388708274730}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c512264724b2e76478c900b9544dc899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 7174511771806284568, guid: 4eb0b7b5b1d894444b78b18b3dd03074, type: 3}
+  dialogueBox: {fileID: 5854359897921727640}
   dialogueName: {fileID: 3341176558555594272}
   dialogueText: {fileID: 4859416973418256753}
 --- !u!1 &959753478395599626
