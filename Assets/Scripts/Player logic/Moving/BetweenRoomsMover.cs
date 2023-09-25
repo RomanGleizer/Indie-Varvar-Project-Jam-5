@@ -25,7 +25,7 @@ public class BetweenRoomsMover : MonoBehaviour
         {
             await Task.Delay(500);
             isFirstCycleStarted = true;
-            allScripts.FirstCycle();
+            allScripts.FirstCycleFirstHalf();
         }
     }
 

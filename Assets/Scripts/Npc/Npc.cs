@@ -10,6 +10,8 @@ public class Npc : MonoBehaviour
 
     public bool isGetEssentialItem;
 
+    public int NumberWantedItem => numberWantedItem;
+
     public Transform CurrentRoom => currentRoom;
 
     private void Awake()

@@ -692,6 +692,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bcb3f5da3183e4d98ea99fafe2e503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &365001401 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6294709694596999842, guid: 2d056e0cbb8fc434b853d6f58a73d021, type: 3}
+  m_PrefabInstance: {fileID: 1865707083477279402}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365001393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144e8ced523266746b3775d85ad788e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &395677093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 710229920005028451, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -97.7
+      value: -97.70001
       objectReference: {fileID: 0}
     - target: {fileID: 710229920005028451, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1455,6 +1466,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 45.7
       objectReference: {fileID: 0}
+    - target: {fileID: 8383778347201046831, guid: cd46bcb475c1cd44a80f6034c0284a9b, type: 3}
+      propertyPath: speaker
+      value: 
+      objectReference: {fileID: 365001401}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3696,6 +3711,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2829291869822793023, guid: 0638d8c456f26784e9350792751a804f, type: 3}
+      propertyPath: childDialogs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829291869822793023, guid: 0638d8c456f26784e9350792751a804f, type: 3}
+      propertyPath: childDialogs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 90129cdbccb94f14185279f3901569d7, type: 2}
+    - target: {fileID: 2829291869822793023, guid: 0638d8c456f26784e9350792751a804f, type: 3}
+      propertyPath: childDialogs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ffb246dc6727b33489f4097cd709fb6d, type: 2}
+    - target: {fileID: 2829291869822793023, guid: 0638d8c456f26784e9350792751a804f, type: 3}
+      propertyPath: childDialogs.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f08b69a0aa376524f87442fa8a8ee7c1, type: 2}
+    - target: {fileID: 2829291869822793023, guid: 0638d8c456f26784e9350792751a804f, type: 3}
+      propertyPath: childDialogs.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 17603245881d3cf4bb9265febe83d350, type: 2}
+    - target: {fileID: 2829291869822793023, guid: 0638d8c456f26784e9350792751a804f, type: 3}
+      propertyPath: childDialogs.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: a46258331dd475348a3da9815994bf35, type: 2}
     - target: {fileID: 4160982535292808444, guid: 0638d8c456f26784e9350792751a804f, type: 3}
       propertyPath: m_Name
       value: Dialogs
