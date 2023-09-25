@@ -8,7 +8,11 @@ public class Npc : MonoBehaviour
 
     private Transform currentRoom;
 
+<<<<<<< Updated upstream
     public bool isGetEssentialItem;
+=======
+    public int NumberWantedItem => numberWantedItem;
+>>>>>>> Stashed changes
 
     public Transform CurrentRoom => currentRoom;
 

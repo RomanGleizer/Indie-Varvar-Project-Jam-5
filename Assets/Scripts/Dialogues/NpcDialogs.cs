@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class NpcDialogs : MonoBehaviour
 {
-    [SerializeField] private DialogueObject[] boyDialogs;
+    [SerializeField] private DialogueObject[] childDialogs;
     [SerializeField] private DialogueObject[] girlDialogs;
     [SerializeField] private DialogueObject[] oldManDialogs;
 
-    public DialogueObject[] BoyDialogs => boyDialogs;
+    public DialogueObject[] ChildDialogs => childDialogs;
 
     public DialogueObject[] GirlDialogs => girlDialogs;
     

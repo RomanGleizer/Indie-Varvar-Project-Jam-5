@@ -21,6 +21,7 @@ public class ItemTaker : MonoBehaviour
 
     private void Awake()
     {
+        typeItemInArm = -1;
         currentRoom = GetComponent<Transform>();
         InvokeRepeating(nameof(DropItem), 0.1f, 0.1f);
     }
@@ -64,7 +65,7 @@ public class ItemTaker : MonoBehaviour
         Destroy(item.gameObject);
     }
 
-    private void DestroyItemFromInventory()
+    public void DestroyItemFromInventory()
     {
         inventorySprite.sprite = emptyInventorySprite;
         typeItemInArm = 0;

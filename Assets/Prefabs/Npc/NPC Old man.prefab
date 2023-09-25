@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7972342036476574856}
   - component: {fileID: 3600671794097016633}
   - component: {fileID: 7747563987948043083}
+  - component: {fileID: -813888441998261396}
   m_Layer: 5
   m_Name: NPC Old man
   m_TagString: Untagged
@@ -160,6 +161,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberWantedItem: 2
   essentialItem: {fileID: -180215133, guid: 9e5734f1bf22b6848b699e9791047e5a, type: 3}
+--- !u!114 &-813888441998261396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420275400605773541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1031c57ccef7c42931c33dd5a24968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8124244131580251173
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class AllScripts : MonoBehaviour
     private Transform roomThree;
     private Transform roomFour;
     private Transform roomFive;
+    private (Npc Npc, Item Item) currentObjects;
 
     private Spawn spawn;
 
@@ -21,33 +22,56 @@ public class AllScripts : MonoBehaviour
         spawn = GetComponent<Spawn>();
         InitializeRooms();
         ZeroCycle();
+        InvokeRepeating(nameof(FirstCycleSecondHalf), 0.5f, 0.5f);
+        InvokeRepeating(nameof(FirstCycleThirdHalf), 0.5f, 0.5f);
+        InvokeRepeating(nameof(FirstCycleFinalHalf), 0.5f, 0.5f);
     }
 
     private void ZeroCycle()
         => StartCoroutine(dialogueDisplayer.MoveThroughDialogue(voices[0]));
 
-    public void FirstCycle()
+    public void FirstCycleFirstHalf()
     {
         DoCycle(voices[1]);
 
-        GenerateObjects(
+        currentObjects = GenerateObjects(
             new NpcData(1, 1, 1, 2, roomFive, new Vector3(3, 1, 0)), 
             new ItemData(1, roomOne, new Vector3(2, 1, 0)));
+    }
 
-        GenerateObjects(
+    public void FirstCycleSecondHalf()
+    {
+        if (!dialogueDisplayer.IsReadyHideGirl) return;
+
+        dialogueDisplayer.SwitchGirlHideStatus(false);
+        currentObjects.Npc.gameObject.SetActive(false);
+
+        currentObjects = GenerateObjects(
             new NpcData(2, 2, 2, 1, roomFour, new Vector3(-2, 1, 0)),
             new ItemData(2, roomOne, new Vector3(1, 1, 0)));
+    }
 
-        GenerateObjects(
+    public void FirstCycleThirdHalf()
+    {
+        if (!dialogueDisplayer.IsReadyHideChild) return;
+
+        dialogueDisplayer.SwitchChildHideStatus(false);
+        currentObjects.Npc.gameObject.SetActive(false);
+
+        currentObjects = GenerateObjects(
             new NpcData(3, 3, 3, 3, roomThree, new Vector3(-2, 1, 0)),
             new ItemData(3, roomOne, new Vector3(1, 1, 0)));
     }
 
-    private void GenerateObjects(NpcData npcData, ItemData itemData)
+    public void FirstCycleFinalHalf()
     {
-        spawn.SpawnNpc(npcData);
-        spawn.SpawnItem(itemData);
+        if (!dialogueDisplayer.IsReadyHideOldMan) return;
+        dialogueDisplayer.SwitchOldManHideStatus(false);
+        currentObjects.Npc.gameObject.SetActive(false);
     }
+
+    private (Npc Npc, Item Item) GenerateObjects(NpcData npcData, ItemData itemData)
+        => new (spawn.SpawnNpc(npcData), spawn.SpawnItem(itemData));
 
     //private void FirstTwo()
     //{
